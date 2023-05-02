@@ -21,7 +21,7 @@ class AddIfMax: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>) {
+    override fun execute(getArgs: MutableList<Any>, login:String) {
 
         val str = getArgs as List<Any>
         val collection = PriorityQueue<Route>(RouteComporator())
@@ -88,5 +88,6 @@ class AddIfMax: Command() {
         }
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

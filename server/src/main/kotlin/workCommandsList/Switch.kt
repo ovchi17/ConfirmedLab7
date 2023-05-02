@@ -15,7 +15,7 @@ class Switch: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 
         var keyCollection = workWithCollection.checkCollection()
 
@@ -27,6 +27,7 @@ class Switch: Command() {
             workWithResultModule.setMessages("changeToCollPQ")
         }
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 
 }

@@ -16,12 +16,13 @@ class Clear: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>) {
+    override fun execute(getArgs: MutableList<Any>, login:String) {
 
         workWithCollection.clearCollection()
 
         workWithResultModule.setMessages("cleared")
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

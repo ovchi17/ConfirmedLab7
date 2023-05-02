@@ -18,7 +18,7 @@ class RemoveAllByDistance: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 
         val checkDistance = (getArgs[0] as Double).toLong()
 
@@ -47,5 +47,6 @@ class RemoveAllByDistance: Command() {
             }
         }
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

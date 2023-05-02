@@ -3,6 +3,8 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import com.google.gson.Gson
 import controllers.CollectionMainCommands
+import moduleWithResults.Status
+import moduleWithResults.WorkWithResultModule
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.koin.core.component.KoinComponent
@@ -18,13 +20,16 @@ import java.nio.channels.Selector
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2007)
+    var socket = DatagramSocket(2015)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
     val packet = DatagramPacket(buffer, buffer.size)
     val selector = Selector.open()
     val logger: Logger = LogManager.getLogger(ServerModule::class.java)
+    val availableTokens = mutableMapOf<String, String>()
+    val hashSHA = ShaBuilder()
+    val workWithResultModule = WorkWithResultModule()
 
     /**
      * serverReceiver method. Receives args and command from client
@@ -34,10 +39,25 @@ class ServerModule {
         socket.receive(packet)
         val json = String(packet.data, 0, packet.length)
         val getInfo = gson.fromJson(json, ResultModule::class.java)
-        if (getInfo.commandName != "noCommand"){
-            println(getInfo)
-            logger.info("Получена команда: ${getInfo.commandName}")
-            commandStarter.mp(getInfo.commandName)?.execute(getInfo.args)
+        if (getInfo.token == "Update"){
+            commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, "noNeed")
+        } else if (hashSHA.toSha(getInfo.token) in availableTokens.keys){
+            if (getInfo.commandName != "sessionIsOver"){
+                println(getInfo)
+                logger.info("Получена команда: ${getInfo.commandName}")
+                availableTokens.get(hashSHA.toSha(getInfo.token))
+                    ?.let { commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, it) }
+            }else{
+                availableTokens.remove(hashSHA.toSha(getInfo.token))
+                workWithResultModule.setStatus(Status.SUCCESS)
+                serverSender(workWithResultModule.getResultModule())
+                workWithResultModule.clear()
+            }
+        }else{
+            workWithResultModule.setStatus(Status.ERROR)
+            workWithResultModule.setError("noToken")
+            serverSender(workWithResultModule.getResultModule())
+            workWithResultModule.clear()
         }
     }
 
@@ -62,24 +82,26 @@ class CommandStarter(): KoinComponent{
 
     val workWithCollection: CollectionMainCommands by inject()
 
+    val info: Info = Info()
+    val show: Show = Show()
+    val add: Add = Add()
+    val removeById: RemoveById = RemoveById()
+    val clear: Clear = Clear()
+    val save: Save = Save()
+    val load: Load = Load()
+    val updateCommand: UpdateCommand = UpdateCommand()
+    val updateId: UpdateId = UpdateId()
+    val exitServer: ExitServer = ExitServer()
+    val removeFirst: RemoveFirst = RemoveFirst()
+    val addIfMax: AddIfMax = AddIfMax()
+    val history: History = History()
+    val removeAllByDistance: RemoveAllByDistance = RemoveAllByDistance()
+    val averageOfDistance: AverageOfDistance = AverageOfDistance()
+    val filterLessThanDistance: FilterLessThanDistance = FilterLessThanDistance()
+    val switch: Switch = Switch()
+    val token: Token = Token()
+
     fun mp(command: String): Command? {
-        val info: Info = Info()
-        val show: Show = Show()
-        val add: Add = Add()
-        val removeById: RemoveById = RemoveById()
-        val clear: Clear = Clear()
-        val save: Save = Save()
-        val load: Load = Load()
-        val updateCommand: UpdateCommand = UpdateCommand()
-        val updateId: UpdateId = UpdateId()
-        val exitServer: ExitServer = ExitServer()
-        val removeFirst: RemoveFirst = RemoveFirst()
-        val addIfMax: AddIfMax = AddIfMax()
-        val history: History = History()
-        val removeAllByDistance: RemoveAllByDistance = RemoveAllByDistance()
-        val averageOfDistance: AverageOfDistance = AverageOfDistance()
-        val filterLessThanDistance: FilterLessThanDistance = FilterLessThanDistance()
-        val switch: Switch = Switch()
 
         val COMMANDS = mapOf(
             "info" to info,
@@ -98,7 +120,8 @@ class CommandStarter(): KoinComponent{
             "remove_all_by_distance" to removeAllByDistance,
             "average_of_distance" to averageOfDistance,
             "filter_less_than_distance" to filterLessThanDistance,
-            "switch" to switch)
+            "switch" to switch,
+            "token" to token)
 
         if (command in COMMANDS) {
             workWithCollection.historyUpdate(command)

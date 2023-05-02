@@ -20,7 +20,7 @@ class UpdateCommand: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>) {
+    override fun execute(getArgs: MutableList<Any>, login:String) {
 
         workWithCollection.clearCollection()
 
@@ -31,5 +31,6 @@ class UpdateCommand: Command() {
         workWithResultModule.setListObjectPlus(listOfObjectPlus)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

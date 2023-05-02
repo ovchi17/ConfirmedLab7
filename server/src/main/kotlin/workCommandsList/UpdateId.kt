@@ -20,7 +20,7 @@ class UpdateId: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
         val str = getArgs as List<Any>
 
         var id: Long
@@ -87,5 +87,6 @@ class UpdateId: Command() {
             }
         }
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

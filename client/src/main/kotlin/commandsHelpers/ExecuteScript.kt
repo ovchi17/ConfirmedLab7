@@ -58,7 +58,7 @@ class ExecuteScript: KoinComponent {
                                 tokenizator.tokenizatorAdder(specialForAdd, addList)
                             }
                         }else{
-                            tokenizator.tokenizator(args[0], listOf(args[1]))
+                            tokenizator.tokenizator(args[0], listOf(args[1]), args[2])
                         }
                     }
                 }

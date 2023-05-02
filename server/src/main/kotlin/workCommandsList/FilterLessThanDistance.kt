@@ -19,7 +19,7 @@ class FilterLessThanDistance: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 
         var flag = false
 
@@ -56,5 +56,6 @@ class FilterLessThanDistance: Command() {
         workWithCollection.addAllElementToCollection(collection)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

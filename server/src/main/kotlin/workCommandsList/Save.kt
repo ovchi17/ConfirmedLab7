@@ -21,7 +21,7 @@ class Save: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 //         val pathToFile = System.getProperty("DataOfCollection.server")
         val pathToFile: String = System.getenv("DATAOFCOLLECTION")
         val collection = PriorityQueue<Route>(RouteComporator())
@@ -32,5 +32,6 @@ class Save: Command() {
          workWithResultModule.setMessages("saved")
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
      }
 }

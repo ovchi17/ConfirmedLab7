@@ -7,5 +7,5 @@ package moduleWithResults
  * @since 1.0.0
  */
 enum class Status {
-    SUCCESS, ERROR, UPDATE
+    SUCCESS, ERROR, UPDATE, TOKEN
 }

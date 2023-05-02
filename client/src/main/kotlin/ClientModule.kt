@@ -27,7 +27,7 @@ class ClientModule() {
     private lateinit var channel: DatagramChannel
     val answerToUser = AnswerToUser()
     private val nameHost: String = "localhost"
-    private val namePort: Int = 2007
+    private val namePort: Int = 2015
     val gson = Gson()
     val logger: Logger = LogManager.getLogger(ClientModule::class.java)
 
@@ -59,10 +59,11 @@ class ClientModule() {
      * @param command String with commmand
      * @param args List with arguments
      */
-    fun sender(command: String, args: List<Any>){
+    fun sender(command: String, args: List<Any>, token: String){
         val data = WorkWithResultModule()
         data.setCommand(command)
         data.setArgs(args)
+        data.setToken(token)
         val json = gson.toJson(data.getResultModule())
         val buffer = ByteBuffer.wrap(json.toByteArray())
         val address = InetSocketAddress(nameHost, namePort)
@@ -83,7 +84,7 @@ class ClientModule() {
         val selectedKeys = selector.selectedKeys()
         if (selectedKeys.isEmpty()) {
             logger.info("Ответ от сервера не получен")
-            return ResultModule(mutableListOf(), Status.ERROR, "noAnswer", "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf())
+            return ResultModule(mutableListOf(), Status.ERROR, "noAnswer", "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken")
         }else{
             val bufferReceive = ByteBuffer.allocate(65535)
             logger.info("Получен ответ от сервера")

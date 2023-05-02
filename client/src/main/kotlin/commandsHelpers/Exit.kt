@@ -19,7 +19,10 @@ class Exit: KoinComponent {
      * execute method. Stop client module
      *
      */
-    fun execute(){
+    fun execute(token: String){
+        val sendList = mutableListOf<Any>()
+        clientModule.sender("sessionIsOver", sendList, token)
+        val resultAnswer = clientModule.receiver()
         clientModule.stop()
 
         exitProcess(0)

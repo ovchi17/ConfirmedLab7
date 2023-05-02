@@ -19,7 +19,7 @@ class Load: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 //        val pathToFile: String = System.getProperty("DataOfCollection.server")
 //        по факту нет файла=нет путя=нечего загружать, нужно реализовать именно файл НОРМАЛЬНО.
         val pathToFile: String = System.getenv("DATAOFCOLLECTION")
@@ -42,5 +42,6 @@ class Load: Command() {
         workWithResultModule.setMessages("loaded")
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

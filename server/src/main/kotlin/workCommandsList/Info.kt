@@ -15,7 +15,7 @@ class Info: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String){
 
         val collection = workWithCollection.getCollection()
 
@@ -24,5 +24,6 @@ class Info: Command() {
         workWithResultModule.setMessages("Дата создания коллекции: " + workWithCollection.getInitDate().toString())
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

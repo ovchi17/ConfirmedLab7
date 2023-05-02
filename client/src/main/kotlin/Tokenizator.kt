@@ -131,7 +131,7 @@ class Tokenizator: KoinComponent {
      * @param command: Command. Contains the command to be executed.
      * @param mass: Array of String arguments.
      */
-    fun tokenizator(command: String, mass: List<String>){
+    fun tokenizator(command: String, mass: List<String>, tkn: String){
         val sendList = mutableListOf<Any>()
         val clientModule: ClientModule by inject()
         if (commandsList(command) == "listOfLong"){
@@ -143,7 +143,7 @@ class Tokenizator: KoinComponent {
                 answerToUser.writeToConsoleLn("Ошибка в парматрах, установлено значение по умолчанию")
             }
             sendList.add(newToken)
-            clientModule.sender(command, sendList) // Следить
+            clientModule.sender(command, sendList, tkn) // Следить
             val resultAnswer = clientModule.receiver()
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfString"){
@@ -176,7 +176,7 @@ class Tokenizator: KoinComponent {
             val distance = addSet.distance("noInfo")
             val list = mutableListOf<Any>(name, coord1, coord2, location1, location2, location3, location1_2, location2_2, location3_2, distance)
             sendList.addAll(list)
-            clientModule.sender(command, sendList) // Следить
+            clientModule.sender(command, sendList, tkn) // Следить
             val resultAnswer = clientModule.receiver()
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfObjectPlus"){
@@ -194,7 +194,7 @@ class Tokenizator: KoinComponent {
             val id: Long = addSet.id("noInfo")
             val list = mutableListOf<Any>(name, coord1, coord2, location1, location2, location3, location1_2, location2_2, location3_2, distance, id)
             sendList.addAll(list)
-            clientModule.sender(command, sendList) // Следить
+            clientModule.sender(command, sendList, tkn) // Следить
             val resultAnswer = clientModule.receiver()
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfNo"){
@@ -202,9 +202,9 @@ class Tokenizator: KoinComponent {
             if (command == "help"){
                 help.execute()
             }else if(command == "exit"){
-                exit.execute()
+                exit.execute(tkn)
             }else{
-                clientModule.sender(command, sendList) //Следить
+                clientModule.sender(command, sendList, tkn) //Следить
                 val resultAnswer = clientModule.receiver()
                 if (command == "update_command"){
                     update.execute(resultAnswer)

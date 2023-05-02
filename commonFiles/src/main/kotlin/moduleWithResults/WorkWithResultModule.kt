@@ -7,7 +7,7 @@ package moduleWithResults
  * @since 1.0.0
  */
 class WorkWithResultModule {
-    var result: ResultModule = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf())
+    var result: ResultModule = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken")
 
     /**
      * getMessages method. Return messages from commands
@@ -143,4 +143,17 @@ class WorkWithResultModule {
     fun getResultModule(): ResultModule{
         return result
     }
+
+    fun setToken(token: String){
+        result.token = token
+    }
+
+    fun getToken(): String{
+        return result.token
+    }
+
+    fun clear(){
+        result = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken")
+    }
+
 }
