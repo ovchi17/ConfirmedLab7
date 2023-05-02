@@ -46,7 +46,12 @@ fun main() {
                 argument.add(getCommandFromUser[i])
             }
             logger.info("Запуск команды: $command")
-            tokenizator.tokenizator(command, argument, tkn)
+            if (command == "log_out"){
+                writeToConsole.writeToConsole("Вы вышли из профиля")
+                authorizationFlag = false
+            }else{
+                tokenizator.tokenizator(command, argument, tkn)
+            }
         }else{
             writeToConsole.writeToConsoleLn("Здравствуйте! Для дальнейшей работы с консолью, пожалуйста, введите ваш логин и пароль.")
             writeToConsole.writeToConsole("Ваш логин: ")
