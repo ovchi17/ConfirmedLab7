@@ -11,6 +11,7 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.nio.channels.Selector
 import java.util.concurrent.Executors
+import java.util.concurrent.ForkJoinPool
 
 /**
  * Class ServerModule.
@@ -30,6 +31,7 @@ class ServerModule {
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPool = Executors.newFixedThreadPool(10)
+    val forkJoinPool = ForkJoinPool.commonPool()
     var ct = 0
 
     /**
@@ -50,13 +52,14 @@ class ServerModule {
      * @param result arguments
      */
     fun serverSender(result: ResultModule){
-        val gson = Gson()
-        val json = gson.toJson(result)
-        val changedToBytes = json.toByteArray()
-        val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
-        print(result.msgToPrint)
-        logger.info("Отправлен результат")
-        socket.send(packetToSend)
+        forkJoinPool.execute{
+            val json = gson.toJson(result)
+            val changedToBytes = json.toByteArray()
+            val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
+            print(result.msgToPrint)
+            logger.info("Отправлен результат")
+            socket.send(packetToSend)
+        }
     }
 
 }

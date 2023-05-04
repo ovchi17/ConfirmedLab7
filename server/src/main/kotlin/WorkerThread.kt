@@ -25,7 +25,7 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
 
     private fun processingCommand(){
         try {
-            //Thread.sleep(500)
+            //Thread.sleep(2000)
             ct++
             val json = String(packet.data, 0, packet.length)
             val getInfo = gson.fromJson(json, ResultModule::class.java)
