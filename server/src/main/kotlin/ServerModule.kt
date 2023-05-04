@@ -19,7 +19,7 @@ import java.util.concurrent.Executors
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2018)
+    var socket = DatagramSocket(2019)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
@@ -30,14 +30,16 @@ class ServerModule {
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPool = Executors.newFixedThreadPool(10)
+    var ct = 0
 
     /**
      * serverReceiver method. Receives args and command from client
      *
      */
     fun serverReceiver(){
+        ct++
         socket.receive(packet)
-        val worker: Runnable = WorkerThread(packet)
+        val worker: Runnable = WorkerThread(packet, ct)
         threadPool.execute(worker)
 
     }

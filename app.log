@@ -1106,3 +1106,33 @@
 2023-05-04 23:52:05.823 [main] INFO  ClientModule - Запрос отправлен
 2023-05-04 23:52:08.837 [main] INFO  ClientModule - Ответ от сервера не получен
 2023-05-04 23:52:22.545 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:11:37.088 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 00:11:37.096 [main] INFO  KoinStarter - Начало программы
+2023-05-05 00:11:52.514 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 00:12:03.997 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:04.031 [pool-2-thread-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:04.041 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:19.249 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:12:36.249 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:36.254 [pool-2-thread-2] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:36.255 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:43.525 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:43.529 [pool-2-thread-3] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:43.530 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:49.534 [main] INFO  KoinStarter - Запуск команды: kskssk
+2023-05-05 00:12:49.535 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:12:56.222 [main] INFO  KoinStarter - Запуск команды: 
+2023-05-05 00:12:56.222 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObjectPlus
+2023-05-05 00:13:07.745 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:07.749 [pool-2-thread-4] INFO  ServerModule - Отправлен результат
+2023-05-05 00:13:07.750 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:13:13.250 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 00:13:13.250 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:13:13.250 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:13.253 [pool-2-thread-5] INFO  ServerModule - Отправлен результат
+2023-05-05 00:13:13.254 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:13:23.065 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-05 00:13:23.065 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:13:23.066 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:26.068 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 00:13:32.684 [main] INFO  KoinStarter - Запуск команды: log_out

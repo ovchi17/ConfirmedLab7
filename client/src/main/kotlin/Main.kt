@@ -65,8 +65,9 @@ fun main() {
             writeToConsole.writeToConsole("Ваш пароль: ")
             val pas: String = readln()
             if (login.length > 0 && pas.length > 0){
-                getToken.loginAndGetToken(login, pas)
-                authorizationFlag = true
+                if (getToken.loginAndGetToken(login, pas)){
+                    authorizationFlag = true
+                }
             }
         }
 

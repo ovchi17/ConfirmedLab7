@@ -6,7 +6,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import java.net.DatagramPacket
 
-class WorkerThread(packetGet: DatagramPacket): Runnable, KoinComponent {
+class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent {
 
     val packet = packetGet
     val gson = Gson()
@@ -14,7 +14,7 @@ class WorkerThread(packetGet: DatagramPacket): Runnable, KoinComponent {
     val hashSHA = ShaBuilder()
     val serverModule: ServerModule by inject()
     val workWithResultModule: WorkWithResultModule by inject()
-    var ct = 0
+    var ct = num
 
 
     override fun run() {
