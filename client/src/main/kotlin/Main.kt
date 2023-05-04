@@ -8,6 +8,7 @@ import usersView.AnswerToUser
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import java.io.File
+import kotlin.system.exitProcess
 
 fun main() {
 
@@ -32,7 +33,6 @@ fun main() {
     clientModule.start()
     logger.info("Начало программы")
     tokenizator.downloadLists()
-    //tokenizator.tokenizator("update_command", mutableListOf<String>())
 
     while (true){
         if (authorizationFlag){
@@ -47,8 +47,13 @@ fun main() {
             }
             logger.info("Запуск команды: $command")
             if (command == "log_out"){
-                writeToConsole.writeToConsole("Вы вышли из профиля")
+                writeToConsole.writeToConsoleLn("Вы вышли из профиля")
                 authorizationFlag = false
+                writeToConsole.writeToConsoleLn("Завершить работу консольного приложения Y/N")
+                val ans: String = readln()
+                if (ans == "Y"){
+                    exitProcess(0)
+                }
             }else{
                 tokenizator.tokenizator(command, argument, tkn)
             }
