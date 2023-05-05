@@ -7,7 +7,7 @@ package moduleWithResults
  * @since 1.0.0
  */
 class WorkWithResultModule {
-    var result: ResultModule = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken")
+    var result: ResultModule = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken", "noKey")
 
     /**
      * getMessages method. Return messages from commands
@@ -152,8 +152,16 @@ class WorkWithResultModule {
         return result.token
     }
 
+    fun setUniqueKey(uniqueKey: String){
+        result.uniqueKey = uniqueKey
+    }
+
+    fun getUniqueKey(): String{
+        return result.uniqueKey
+    }
+
     fun clear(){
-        result = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken")
+        result = ResultModule(mutableListOf(), Status.SUCCESS, null, "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken", "noKey")
     }
 
 }

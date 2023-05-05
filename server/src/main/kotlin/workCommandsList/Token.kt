@@ -9,13 +9,14 @@ class Token: Command() {
 
     val hashSHA = ShaBuilder()
 
-    override fun execute(getArgs: MutableList<Any>, login:String){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 
         val lognpass = (getArgs[0].toString()).split(":")
         val resultPas =  hashSHA.toSha(lognpass[1])
         val resultLog = hashSHA.toSha(lognpass[0])
         if (resultLog in serverModule.availableTokens.values){
             workWithResultModule.setStatus(Status.ERROR)
+            workWithResultModule.setUniqueKey(uniqueToken)
             serverModule.serverSender(workWithResultModule.getResultModule())
             workWithResultModule.clear()
         }else{
@@ -27,6 +28,7 @@ class Token: Command() {
 
             workWithResultModule.setStatus(Status.TOKEN)
             workWithResultModule.setToken(token)
+            workWithResultModule.setUniqueKey(uniqueToken)
             serverModule.availableTokens[hashSHA.toSha(token)] = resultLog
             serverModule.serverSender(workWithResultModule.getResultModule())
             workWithResultModule.clear()

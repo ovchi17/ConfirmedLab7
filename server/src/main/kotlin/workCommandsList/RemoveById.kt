@@ -18,7 +18,7 @@ class RemoveById: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>, login:String) {
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String) {
 
         val checkId = (getArgs[0] as Double).toLong()
         var setMessageForMoreThenOne = "noId"
@@ -48,6 +48,8 @@ class RemoveById: Command() {
             }
             workWithResultModule.setMessages(setMessageForMoreThenOne)
         }
+        workWithResultModule.setUniqueKey(uniqueToken)
+
         serverModule.serverSender(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }

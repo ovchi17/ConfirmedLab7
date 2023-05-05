@@ -15,13 +15,14 @@ class Info: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>, login:String){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 
         val collection = workWithCollection.getCollection()
 
         workWithResultModule.setMessages("Тип коллекции: " + collection.javaClass.toString())
         workWithResultModule.setMessages("Размер коллекции: " + collection.size.toString())
         workWithResultModule.setMessages("Дата создания коллекции: " + workWithCollection.getInitDate().toString())
+        workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
         workWithResultModule.clear()

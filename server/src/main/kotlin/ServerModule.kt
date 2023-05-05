@@ -20,7 +20,7 @@ import java.util.concurrent.ForkJoinPool
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2019)
+    var socket = DatagramSocket(2043)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
@@ -31,7 +31,7 @@ class ServerModule {
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPool = Executors.newFixedThreadPool(10)
-    val forkJoinPool = ForkJoinPool.commonPool()
+    val executor = Executors.newFixedThreadPool(5)
     var ct = 0
 
     /**
@@ -41,9 +41,10 @@ class ServerModule {
     fun serverReceiver(){
         ct++
         socket.receive(packet)
-        val worker: Runnable = WorkerThread(packet, ct)
-        threadPool.execute(worker)
-
+        executor.execute {
+            val worker: Runnable = WorkerThread(packet, ct)
+            threadPool.execute(worker)
+        }
     }
 
     /**
@@ -52,11 +53,11 @@ class ServerModule {
      * @param result arguments
      */
     fun serverSender(result: ResultModule){
-        forkJoinPool.execute{
+        ForkJoinPool.commonPool().execute{
             val json = gson.toJson(result)
             val changedToBytes = json.toByteArray()
             val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
-            print(result.msgToPrint)
+            println(result.msgToPrint + "alert!!")
             logger.info("Отправлен результат")
             socket.send(packetToSend)
         }

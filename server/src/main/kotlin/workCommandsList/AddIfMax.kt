@@ -21,7 +21,7 @@ class AddIfMax: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>, login:String) {
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String) {
 
         val str = getArgs as List<Any>
         val collection = PriorityQueue<Route>(RouteComporator())
@@ -86,6 +86,8 @@ class AddIfMax: Command() {
                 workWithResultModule.setMessages("noSuccess")
             }
         }
+
+        workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
         workWithResultModule.clear()

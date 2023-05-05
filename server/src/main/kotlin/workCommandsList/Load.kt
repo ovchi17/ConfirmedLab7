@@ -19,7 +19,7 @@ class Load: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>, login:String){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 //        val pathToFile: String = System.getProperty("DataOfCollection.server")
 //        по факту нет файла=нет путя=нечего загружать, нужно реализовать именно файл НОРМАЛЬНО.
         val pathToFile: String = System.getenv("DATAOFCOLLECTION")
@@ -40,6 +40,7 @@ class Load: Command() {
             }
         }
         workWithResultModule.setMessages("loaded")
+        workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
         workWithResultModule.clear()

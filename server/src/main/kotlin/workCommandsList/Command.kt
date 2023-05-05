@@ -26,6 +26,6 @@ abstract class Command(): KoinComponent {
      *
      * @param getArgs arguments
      */
-    abstract fun execute(getArgs: MutableList<Any>, login:String)
+    abstract fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String)
 
 }
