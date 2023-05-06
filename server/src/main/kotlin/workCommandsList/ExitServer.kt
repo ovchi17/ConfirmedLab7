@@ -17,9 +17,11 @@ class ExitServer: Command(){
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
         //workWithResultModule.setMessages("end")
+        workWithResultModule.setUniqueKey(uniqueToken)
         exitProcess(0)
+
 
         serverModule.serverSender(workWithResultModule.getResultModule())
     }

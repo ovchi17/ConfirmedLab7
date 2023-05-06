@@ -15,7 +15,7 @@ class Switch: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 
         var keyCollection = workWithCollection.checkCollection()
 
@@ -26,7 +26,11 @@ class Switch: Command() {
             workWithCollection.changeCollection()
             workWithResultModule.setMessages("changeToCollPQ")
         }
+
+        workWithResultModule.setUniqueKey(uniqueToken)
+
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 
 }

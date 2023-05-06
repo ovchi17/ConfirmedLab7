@@ -28,37 +28,13 @@ class Update: KoinComponent {
         val lstObject = module.listOfObject
         val lstObjectPlus = module.listOfObjectPlus
         var flag = false
+        val flag1 = checker(lstNo, tokenizator.listOfNo)
+        val flag2 = checker(lstLong, tokenizator.listOfLong)
+        val flag3 = checker(lstObject, tokenizator.listOfObject)
+        val flag4 = checker(lstObjectPlus, tokenizator.listOfObjectPlus)
 
-        for (i in lstNo){
-            if (i !in tokenizator.listOfNo){
-                flag = true
-                answerToUser.writeToConsoleLn("Получена новая команда $i")
-                tokenizator.listOfNo.add(i)
-            }
-        }
-
-        for (i in lstLong){
-            if (i !in tokenizator.listOfLong){
-                flag = true
-                answerToUser.writeToConsoleLn("Получена новая команда $i")
-                tokenizator.listOfLong.add(i)
-            }
-        }
-
-        for (i in lstObject){
+        if (flag1 || flag2 || flag3 || flag4){
             flag = true
-            if (i !in tokenizator.listOfObject){
-                answerToUser.writeToConsoleLn("Получена новая команда $i")
-                tokenizator.listOfObject.add(i)
-            }
-        }
-
-        for (i in lstObjectPlus){
-            flag = true
-            if (i !in tokenizator.listOfObjectPlus){
-                answerToUser.writeToConsoleLn("Получена новая команда $i")
-                tokenizator.listOfObjectPlus.add(i)
-            }
         }
 
         if (flag == false){
@@ -68,4 +44,17 @@ class Update: KoinComponent {
         tokenizator.uploadLists()
 
     }
+
+    fun checker(listModule: MutableList<String>, listTkn: MutableList<String>): Boolean{
+        var flag = false
+        for (i in listModule){
+            if (i !in listTkn){
+                flag = true
+                answerToUser.writeToConsoleLn("Получена новая команда $i")
+                tokenizator.listOfNo.add(i)
+            }
+        }
+        return flag
+    }
+
 }

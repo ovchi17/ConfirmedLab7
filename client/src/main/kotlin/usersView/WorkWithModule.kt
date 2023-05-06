@@ -2,7 +2,6 @@ package usersView
 
 import moduleWithResults.ResultModule
 import moduleWithResults.Status
-import org.koin.core.Koin
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

@@ -59,7 +59,8 @@ class TypeMessages {
         "recursion" to "Возникла рекурсия",
         "changeToCollPQ" to "Коллекция изменена на PriorityQueue",
         "changeToCollLL" to "Коллекция изменена на LinkedList",
-        "noAnswer" to "Ответ от сервера не поступил"
+        "noAnswer" to "Ответ от сервера не поступил",
+        "noToken" to "Такого токена не существет"
     )
 
     /**

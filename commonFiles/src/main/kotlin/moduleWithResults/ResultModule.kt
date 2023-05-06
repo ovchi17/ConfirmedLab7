@@ -14,6 +14,8 @@ data class ResultModule (
     var listOfNo: MutableList<String>,
     var listOfLong: MutableList<String>,
     var listOfObject: MutableList<String>,
-    var listOfObjectPlus: MutableList<String>
+    var listOfObjectPlus: MutableList<String>,
+    var token: String,
+    var uniqueKey: String
 )
 

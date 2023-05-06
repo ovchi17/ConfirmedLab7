@@ -730,90 +730,1167 @@
 2023-04-21 18:31:06.095 [main] INFO  ClientModule - Ответ от сервера не получен
 2023-04-21 18:31:08.789 [main] INFO  KoinStarter - Запуск команды: help
 2023-04-21 18:31:08.790 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:38:26.897 [main] INFO  ClientModule - Запуск DatagramChannel
-2023-04-27 22:38:26.906 [main] INFO  KoinStarter - Начало программы
-2023-04-27 22:38:26.923 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:38:26.939 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:38:29.996 [main] INFO  ClientModule - Ответ от сервера не получен
-2023-04-27 22:39:25.006 [main] INFO  ServerModuleGet - Запуск сервера
-2023-04-27 22:39:34.339 [main] INFO  KoinStarter - Запуск команды: 
-2023-04-27 22:39:34.339 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObjectPlus
-2023-04-27 22:39:47.541 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:39:47.554 [main] INFO  ServerModule - Получена команда: 
-2023-04-27 22:39:50.546 [main] INFO  ClientModule - Ответ от сервера не получен
-2023-04-27 22:40:03.420 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:40:03.420 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:40:03.420 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:40:03.421 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:40:03.427 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:40:06.432 [main] INFO  ClientModule - Ответ от сервера не получен
-2023-04-27 22:40:36.606 [main] INFO  KoinStarter - Запуск команды: clear
-2023-04-27 22:40:36.606 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:40:36.607 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:40:36.608 [main] INFO  ServerModule - Получена команда: clear
-2023-04-27 22:40:36.610 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:40:36.610 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:40:43.819 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:40:43.819 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:40:43.819 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:40:43.820 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:40:43.822 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:40:43.822 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:40:51.621 [main] INFO  KoinStarter - Запуск команды: add
-2023-04-27 22:40:51.621 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
-2023-04-27 22:40:56.083 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:40:56.083 [main] INFO  ServerModule - Получена команда: add
-2023-04-27 22:40:56.086 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:40:56.096 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:40:58.498 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:40:58.498 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:40:58.498 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:40:58.499 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:40:58.500 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:40:58.500 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:02.598 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:41:02.599 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:02.599 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:41:02.599 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:41:02.600 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:41:02.601 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:22.153 [main] INFO  KoinStarter - Запуск команды: bebra
-2023-04-27 22:41:22.154 [main] INFO  Tokenizator - Неверная команда
-2023-04-27 22:41:24.923 [main] INFO  KoinStarter - Запуск команды: help
-2023-04-27 22:41:24.923 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:28.114 [main] INFO  KoinStarter - Запуск команды: help
-2023-04-27 22:41:28.114 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:30.368 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:41:30.368 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:30.369 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:41:30.370 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:41:30.371 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:41:30.371 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:34.290 [main] INFO  KoinStarter - Запуск команды: clear
-2023-04-27 22:41:34.290 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:34.290 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:41:34.291 [main] INFO  ServerModule - Получена команда: clear
-2023-04-27 22:41:34.292 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:41:34.295 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:37.029 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:41:37.029 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:37.029 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:41:37.030 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:41:37.031 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:41:37.032 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:39.166 [main] INFO  KoinStarter - Запуск команды: show
-2023-04-27 22:41:39.166 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:41:39.167 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:41:39.167 [main] INFO  ServerModule - Получена команда: show
-2023-04-27 22:41:39.170 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:41:39.170 [main] INFO  ServerModule - Отправлен результат
-2023-04-27 22:41:55.658 [main] INFO  KoinStarter - Запуск команды: exitserver
-2023-04-27 22:41:55.658 [main] INFO  Tokenizator - Неверная команда
-2023-04-27 22:42:02.552 [main] INFO  KoinStarter - Запуск команды: exit_server
-2023-04-27 22:42:02.552 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:42:02.552 [main] INFO  ClientModule - Запрос отправлен
-2023-04-27 22:42:02.553 [main] INFO  ServerModule - Получена команда: exit_server
-2023-04-27 22:42:02.554 [main] INFO  ClientModule - Получен ответ от сервера
-2023-04-27 22:42:05.749 [main] INFO  KoinStarter - Запуск команды: exit
-2023-04-27 22:42:05.749 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
-2023-04-27 22:42:05.749 [main] INFO  ClientModule - Остановка DatagramChannel
+2023-05-03 00:37:51.533 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 00:37:51.569 [main] INFO  KoinStarter - Начало программы
+2023-05-03 00:38:17.513 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 00:38:31.134 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 00:41:56.981 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 00:41:56.987 [main] INFO  KoinStarter - Начало программы
+2023-05-03 00:42:06.459 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 00:42:06.475 [main] INFO  ServerModule - Получена команда: token
+2023-05-03 00:42:06.493 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 00:42:06.504 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 01:52:32.884 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 01:52:48.603 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 01:52:48.610 [main] INFO  KoinStarter - Начало программы
+2023-05-03 01:52:59.348 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 01:52:59.370 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 01:52:59.388 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 01:53:31.558 [main] INFO  KoinStarter - Запуск команды: berba
+2023-05-03 01:53:31.559 [main] INFO  Tokenizator - Неверная команда
+2023-05-03 01:56:13.898 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 01:56:13.905 [main] INFO  KoinStarter - Начало программы
+2023-05-03 01:56:27.783 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 01:56:33.220 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 01:56:33.243 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 01:56:33.262 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 01:57:16.820 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-03 01:57:16.820 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-03 01:57:28.694 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 01:57:28.696 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 01:57:28.697 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 01:57:39.648 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 01:57:39.648 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 01:57:39.648 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 01:57:39.650 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 01:57:39.651 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:03:48.144 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 02:04:00.721 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 02:04:00.727 [main] INFO  KoinStarter - Начало программы
+2023-05-03 02:04:09.168 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:04:09.296 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:04:09.297 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:04:25.545 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:04:25.546 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:04:25.546 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:04:25.547 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:04:25.550 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:04:25.550 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:04:31.924 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:04:31.924 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:04:31.924 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:04:31.927 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:04:31.927 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:04:47.220 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-03 02:04:47.220 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-03 02:04:57.121 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:04:57.123 [main] INFO  ServerModule - Получена команда: add
+2023-05-03 02:04:57.265 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:04:57.266 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:05:00.963 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:05:00.963 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:05:00.963 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:05:00.964 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:05:00.966 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:05:00.966 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:05:12.103 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:05:12.104 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:05:12.104 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:05:12.105 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:05:12.106 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:05:12.106 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:05:29.657 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:05:29.657 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:05:29.658 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:05:29.659 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:05:29.660 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:05:29.661 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:19:42.799 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 02:20:02.612 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 02:20:02.618 [main] INFO  KoinStarter - Начало программы
+2023-05-03 02:20:14.180 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:14.209 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:14.221 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:20:25.247 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:20:25.248 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:20:25.248 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:25.249 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:20:25.251 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:25.251 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:20:31.168 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:20:31.168 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:20:31.168 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:31.170 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:31.170 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:20:36.538 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:20:36.538 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:20:36.538 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:36.539 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:20:36.541 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:36.542 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:20:49.673 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:20:49.673 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:20:49.674 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:49.675 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:20:49.676 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:49.676 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:20:53.568 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:20:53.568 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:20:53.568 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:20:53.569 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:20:53.570 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:20:53.571 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:17.633 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:21:17.633 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:17.633 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:17.634 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:21:17.636 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:17.636 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:22.058 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:21:22.058 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:22.059 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:22.061 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:21:22.063 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:22.064 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:40.703 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:21:40.703 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:40.703 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:40.704 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:21:40.705 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:40.706 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:44.316 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:21:44.316 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:44.316 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:44.317 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:21:44.319 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:44.319 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:53.388 [main] INFO  KoinStarter - Запуск команды: info
+2023-05-03 02:21:53.388 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:53.389 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:53.390 [main] INFO  ServerModule - Получена команда: info
+2023-05-03 02:21:53.392 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:53.392 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:21:59.250 [main] INFO  KoinStarter - Запуск команды: switch
+2023-05-03 02:21:59.250 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:21:59.251 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:21:59.251 [main] INFO  ServerModule - Получена команда: switch
+2023-05-03 02:21:59.252 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:21:59.253 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:22:09.887 [main] INFO  KoinStarter - Запуск команды: switch
+2023-05-03 02:22:09.887 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:22:09.887 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:22:09.888 [main] INFO  ServerModule - Получена команда: switch
+2023-05-03 02:22:09.890 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:22:09.891 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:22:20.527 [main] INFO  KoinStarter - Запуск команды: exit
+2023-05-03 02:22:20.527 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:22:20.527 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:22:20.529 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:22:20.529 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:22:20.530 [main] INFO  ClientModule - Остановка DatagramChannel
+2023-05-03 02:27:46.890 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-03 02:27:57.193 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-03 02:27:57.200 [main] INFO  KoinStarter - Начало программы
+2023-05-03 02:28:03.294 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:03.324 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:03.337 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:09.542 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:28:09.543 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:28:09.544 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:09.545 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:28:09.547 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:09.548 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:15.729 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:28:15.730 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:28:15.730 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:15.731 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:28:15.732 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:15.733 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:19.813 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:28:19.813 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:28:19.814 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:19.815 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:28:19.816 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:19.817 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:22.654 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:28:22.654 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:28:22.655 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:22.656 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:28:22.658 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:22.658 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:27.251 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-03 02:28:27.252 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-03 02:28:31.853 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:31.855 [main] INFO  ServerModule - Получена команда: add
+2023-05-03 02:28:31.867 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:31.868 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:28:35.260 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:28:35.260 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:28:35.261 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:28:35.263 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:28:35.264 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:28:35.264 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:02.634 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:29:02.634 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:02.634 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:02.635 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:29:02.637 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:02.637 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:06.812 [main] INFO  KoinStarter - Запуск команды: bebra
+2023-05-03 02:29:06.812 [main] INFO  Tokenizator - Неверная команда
+2023-05-03 02:29:12.132 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:29:12.132 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:12.133 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:12.134 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:29:12.135 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:12.135 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:31.391 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:29:31.391 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:31.392 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:31.393 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:31.395 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:34.271 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:29:34.271 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:34.272 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:34.273 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:29:34.274 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:34.274 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:36.733 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:29:36.733 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:36.733 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:36.734 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:29:36.736 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:36.736 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:39.042 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:29:39.042 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:39.043 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:39.044 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:29:39.046 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:39.046 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:41.465 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-03 02:29:41.465 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:41.465 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:41.466 [main] INFO  ServerModule - Получена команда: clear
+2023-05-03 02:29:41.467 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:41.468 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:47.515 [main] INFO  KoinStarter - Запуск команды: yalog
+2023-05-03 02:29:47.515 [main] INFO  Tokenizator - Неверная команда
+2023-05-03 02:29:53.789 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-03 02:29:53.789 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:53.790 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:53.791 [main] INFO  ServerModule - Получена команда: show
+2023-05-03 02:29:53.793 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:53.793 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:59.036 [main] INFO  KoinStarter - Запуск команды: exit
+2023-05-03 02:29:59.037 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-03 02:29:59.037 [main] INFO  ClientModule - Запрос отправлен
+2023-05-03 02:29:59.039 [main] INFO  ServerModule - Отправлен результат
+2023-05-03 02:29:59.039 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-03 02:29:59.040 [main] INFO  ClientModule - Остановка DatagramChannel
+2023-05-04 11:47:32.855 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-04 11:47:56.998 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-04 11:47:57.010 [main] INFO  KoinStarter - Начало программы
+2023-05-04 11:48:14.166 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 11:48:14.300 [main] INFO  ServerModule - Отправлен результат
+2023-05-04 11:48:14.301 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 11:48:35.400 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 11:48:35.402 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 11:48:35.403 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 11:48:35.405 [main] INFO  ServerModule - Получена команда: clear
+2023-05-04 11:48:35.409 [main] INFO  ServerModule - Отправлен результат
+2023-05-04 11:48:35.409 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 11:48:41.619 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 11:48:41.619 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 11:48:41.620 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 11:48:41.624 [main] INFO  ServerModule - Отправлен результат
+2023-05-04 11:48:41.625 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 21:28:59.370 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-04 21:29:16.079 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-04 21:29:16.088 [main] INFO  KoinStarter - Начало программы
+2023-05-04 21:30:10.674 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 21:30:11.234 [pool-2-thread-1] INFO  ServerModule - Отправлен результат
+2023-05-04 21:30:11.235 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 21:30:24.823 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 21:30:24.824 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 21:30:24.824 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 21:30:25.328 [pool-2-thread-2] INFO  ServerModule - Отправлен результат
+2023-05-04 21:30:25.329 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 21:30:39.622 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 21:30:39.622 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 21:30:39.623 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 21:30:40.133 [pool-2-thread-3] INFO  ServerModule - Отправлен результат
+2023-05-04 21:30:40.133 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 21:30:47.517 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-04 21:30:47.517 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-04 21:30:52.578 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 21:30:53.227 [pool-2-thread-4] INFO  ServerModule - Отправлен результат
+2023-05-04 21:30:53.228 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 21:30:57.182 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-04 21:30:57.182 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 21:30:57.182 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 21:30:58.040 [pool-2-thread-5] INFO  ServerModule - Отправлен результат
+2023-05-04 21:30:58.042 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:28:47.628 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-04 23:28:47.629 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:28:47.630 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:28:50.637 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-04 23:28:59.923 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-04 23:44:22.162 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-04 23:44:22.171 [main] INFO  KoinStarter - Начало программы
+2023-05-04 23:44:36.796 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-04 23:44:55.369 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:44:57.568 [pool-2-thread-1] INFO  ServerModule - Отправлен результат
+2023-05-04 23:44:57.569 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:45:07.884 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 23:45:07.911 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:45:07.912 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:45:10.923 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-04 23:45:13.808 [pool-2-thread-2] INFO  ServerModule - Отправлен результат
+2023-05-04 23:46:01.245 [main] INFO  KoinStarter - Запуск команды: bebra
+2023-05-04 23:46:01.245 [main] INFO  Tokenizator - Неверная команда
+2023-05-04 23:46:05.741 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 23:46:05.741 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:46:05.742 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:46:05.745 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:46:11.852 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-04 23:46:11.852 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:46:11.852 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:46:14.868 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-04 23:46:41.697 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 23:46:41.697 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:46:41.698 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:46:44.707 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-04 23:50:03.013 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-04 23:50:03.019 [main] INFO  KoinStarter - Начало программы
+2023-05-04 23:50:15.318 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-04 23:50:20.840 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:50:20.897 [pool-2-thread-1] INFO  ServerModule - Отправлен результат
+2023-05-04 23:50:20.898 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:50:30.092 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 23:50:30.093 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:50:30.093 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:50:30.098 [pool-2-thread-2] INFO  ServerModule - Отправлен результат
+2023-05-04 23:50:30.098 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:50:53.781 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-04 23:50:53.781 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-04 23:50:59.898 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:50:59.901 [pool-2-thread-3] INFO  ServerModule - Отправлен результат
+2023-05-04 23:50:59.902 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:51:04.713 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-04 23:51:04.713 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:51:04.714 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:51:04.718 [pool-2-thread-4] INFO  ServerModule - Отправлен результат
+2023-05-04 23:51:04.718 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:51:09.263 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-04 23:51:09.264 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-04 23:51:14.297 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:51:14.395 [pool-2-thread-5] INFO  ServerModule - Отправлен результат
+2023-05-04 23:51:14.396 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:51:16.737 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-04 23:51:16.737 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:51:16.738 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:51:16.741 [pool-2-thread-6] INFO  ServerModule - Отправлен результат
+2023-05-04 23:51:16.742 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:51:21.744 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-04 23:51:21.744 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:51:21.744 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:51:21.748 [pool-2-thread-7] INFO  ServerModule - Отправлен результат
+2023-05-04 23:51:21.748 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:51:25.499 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-04 23:51:25.499 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:51:25.499 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:51:25.502 [pool-2-thread-8] INFO  ServerModule - Отправлен результат
+2023-05-04 23:51:25.503 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-04 23:52:05.822 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-04 23:52:05.822 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-04 23:52:05.823 [main] INFO  ClientModule - Запрос отправлен
+2023-05-04 23:52:08.837 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-04 23:52:22.545 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:11:37.088 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 00:11:37.096 [main] INFO  KoinStarter - Начало программы
+2023-05-05 00:11:52.514 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 00:12:03.997 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:04.031 [pool-2-thread-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:04.041 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:19.249 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:12:36.249 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:36.254 [pool-2-thread-2] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:36.255 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:43.525 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:12:43.529 [pool-2-thread-3] INFO  ServerModule - Отправлен результат
+2023-05-05 00:12:43.530 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:12:49.534 [main] INFO  KoinStarter - Запуск команды: kskssk
+2023-05-05 00:12:49.535 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:12:56.222 [main] INFO  KoinStarter - Запуск команды: 
+2023-05-05 00:12:56.222 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObjectPlus
+2023-05-05 00:13:07.745 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:07.749 [pool-2-thread-4] INFO  ServerModule - Отправлен результат
+2023-05-05 00:13:07.750 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:13:13.250 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 00:13:13.250 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:13:13.250 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:13.253 [pool-2-thread-5] INFO  ServerModule - Отправлен результат
+2023-05-05 00:13:13.254 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:13:23.065 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-05 00:13:23.065 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:13:23.066 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:13:26.068 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 00:13:32.684 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:26:25.983 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 00:26:25.992 [main] INFO  KoinStarter - Начало программы
+2023-05-05 00:26:39.394 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 00:26:46.237 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:26:46.275 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:26:46.283 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:26:54.784 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 00:26:54.785 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:26:54.786 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:26:54.790 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:26:54.790 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:31.671 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:31.671 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:31.672 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:31.674 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:31.675 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:34.509 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:34.509 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:34.509 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:34.513 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:34.513 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:50.341 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:50.341 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:50.342 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:50.345 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:50.346 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:53.012 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:53.012 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:53.012 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:53.015 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:53.016 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:53.336 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:53.336 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:53.336 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:53.339 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:53.340 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:53.636 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:53.636 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:53.636 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:53.639 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:53.640 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:53.961 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:53.961 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:53.961 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:53.964 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:53.964 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:54.239 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:54.240 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:54.240 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:54.243 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:54.244 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:54.542 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:54.542 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:54.543 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:54.545 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:54.545 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:54.843 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:54.843 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:54.843 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:54.846 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:54.847 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:55.144 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:55.144 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:55.144 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:55.147 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:55.147 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:55.421 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:55.421 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:55.421 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:55.424 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:55.424 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:55.725 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:55.725 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:55.725 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:55.727 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:55.728 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:56.606 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:56.606 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:56.606 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:56.609 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:56.609 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:57.302 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:57.302 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:57.302 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:57.304 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:57.305 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:57.604 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:57.604 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:57.604 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:57.606 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:57.607 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:57.906 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:57.906 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:57.906 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:57.908 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:57.909 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:58.205 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:58.205 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:58.205 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:58.207 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:58.208 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:58.530 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:58.530 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:58.530 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:58.533 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:58.533 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:58.829 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:58.829 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:58.829 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:58.831 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:58.832 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:59.153 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:59.153 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:59.153 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:59.155 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:59.156 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:27:59.523 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:27:59.523 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:27:59.524 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:27:59.525 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:27:59.526 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:00.178 [main] INFO  KoinStarter - Запуск команды: v
+2023-05-05 00:28:00.178 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:01.248 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:01.248 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:01.248 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:01.250 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:01.251 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:01.548 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:01.548 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:01.548 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:01.550 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:01.551 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:01.799 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:01.799 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:01.800 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:01.801 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:01.802 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:02.128 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:02.128 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:02.128 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:02.130 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:02.130 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:03.467 [main] INFO  KoinStarter - Запуск команды: v
+2023-05-05 00:28:03.468 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:03.769 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6
+2023-05-05 00:28:03.769 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:04.151 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6
+2023-05-05 00:28:04.151 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:04.875 [main] INFO  KoinStarter - Запуск команды: 
+2023-05-05 00:28:04.875 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObjectPlus
+2023-05-05 00:28:08.503 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:08.505 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:08.506 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:08.824 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:08.825 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:08.825 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:08.827 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:08.827 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:09.172 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:09.172 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:09.172 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:09.174 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:09.174 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:09.580 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:09.581 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:09.581 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:09.582 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:09.583 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:10.024 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6clear
+2023-05-05 00:28:10.024 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:10.522 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6
+2023-05-05 00:28:10.522 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:10.845 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:10.845 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:10.845 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:10.847 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:10.847 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:11.396 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:11.396 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:11.396 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:11.398 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:11.398 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:11.880 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6
+2023-05-05 00:28:11.880 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:12.202 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:12.203 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:12.203 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:12.204 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:12.205 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:12.527 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:12.527 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:12.527 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:12.529 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:12.529 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:13.174 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:13.174 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:13.174 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:13.176 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:13.177 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:13.611 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:13.611 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:13.612 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:13.613 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:13.614 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:13.936 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:13.936 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:13.936 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:13.938 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:13.939 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:14.283 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:14.283 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:14.283 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:14.285 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:14.285 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:14.630 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:14.630 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:14.631 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:14.632 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:14.633 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:14.954 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:14.954 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:14.954 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:14.957 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:14.958 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:15.278 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:15.278 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:15.279 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:15.280 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:15.281 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:15.742 [main] INFO  KoinStarter - Запуск команды: v
+2023-05-05 00:28:15.742 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:16.065 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6
+2023-05-05 00:28:16.065 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:16.911 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc6clear
+2023-05-05 00:28:16.912 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:28:17.373 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:17.373 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:17.373 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:17.374 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:17.375 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:28:17.835 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:28:17.835 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:28:17.835 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:28:17.837 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:28:17.837 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:30:07.627 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-05 00:30:07.627 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:30:07.628 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:30:07.630 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 00:30:07.630 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:30:18.325 [main] INFO  KoinStarter - Запуск команды: 9863-9ad6-269d-ccc69863-9ad6-269d-ccc6
+2023-05-05 00:30:18.325 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:30:21.208 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:30:21.208 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:30:21.208 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:30:21.210 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 00:30:21.211 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:30:26.080 [main] INFO  KoinStarter - Запуск команды: server_exit
+2023-05-05 00:30:26.080 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:30:32.934 [main] INFO  KoinStarter - Запуск команды: exit_server
+2023-05-05 00:30:32.934 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:30:32.934 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:30:35.947 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 00:32:03.260 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 00:32:10.792 [main] INFO  KoinStarter - Запуск команды: log_ot
+2023-05-05 00:32:10.792 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 00:32:16.023 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 00:32:25.674 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:32:27.705 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:32:28.688 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 00:32:48.620 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:32:48.622 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:32:50.636 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:09.882 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:09.882 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:09.883 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:09.885 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:11.105 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:11.105 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:11.105 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:11.898 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:11.899 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:11.899 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:11.899 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:11.899 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:13.114 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:13.115 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:13.115 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:13.115 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:13.115 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:13.910 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:13.911 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:13.911 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:13.911 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:13.911 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:15.128 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:15.128 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:15.919 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:27.206 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:27.206 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:27.206 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:27.208 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:29.209 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:45.772 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:45.772 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:45.773 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:45.775 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:46.141 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:46.141 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:46.142 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:47.789 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:47.790 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:47.790 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:47.790 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:47.790 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:48.148 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:48.149 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:48.149 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:48.149 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:48.149 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:49.802 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:49.802 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:49.803 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:49.803 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:49.803 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:50.161 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:50.162 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:51.813 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:33:59.014 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:59.014 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:59.014 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:33:59.016 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:33:59.453 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 00:33:59.454 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 00:33:59.454 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 00:34:01.026 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 00:34:01.026 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 00:34:01.467 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:20:12.385 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:20:12.390 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:20:28.056 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 01:20:35.394 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:20:35.431 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:20:35.440 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:20:43.740 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:20:43.740 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:20:43.741 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:20:43.744 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:20:43.744 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:20:49.222 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 01:20:49.222 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:20:49.222 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:20:49.226 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:20:49.226 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:22:42.003 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:22:42.013 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:22:53.292 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 01:22:57.365 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:22:59.403 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:22:59.404 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:23:12.657 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:23:12.658 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:23:12.659 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:23:14.671 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:23:14.672 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:23:18.487 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:23:18.487 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:23:18.488 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:23:20.494 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:23:20.495 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:23:20.495 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:23:20.495 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:23:20.496 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:23:22.505 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:23:22.506 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:23:31.994 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:23:31.994 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:23:31.995 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:23:34.000 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:23:34.001 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:23:50.249 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:23:50.255 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:24:02.174 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:24:04.184 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:24:04.184 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:24:10.390 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:24:10.390 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:24:10.391 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:24:12.400 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:24:12.400 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:24:24.164 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:24:24.164 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:24:24.165 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:24:26.171 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:24:26.171 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:24:27.913 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:24:27.913 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:24:27.914 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:24:29.923 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:24:29.924 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:25:10.315 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:25:10.315 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:25:10.315 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:25:11.015 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:25:11.015 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:25:11.015 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:25:12.332 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:25:12.332 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:25:13.032 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:25:14.326 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 01:25:39.952 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:25:39.952 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:25:39.953 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:25:41.959 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:25:43.962 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 01:25:58.058 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 01:25:58.058 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:25:58.059 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:25:58.060 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:26:00.068 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:26:00.068 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:26:29.545 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:26:29.545 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:26:29.546 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:26:29.549 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:26:30.173 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 01:26:30.174 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:26:30.174 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:26:31.562 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:26:31.562 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:26:32.183 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:26:33.551 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 01:28:03.379 [main] INFO  KoinStarter - Запуск команды: beabra
+2023-05-05 01:28:03.380 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 01:28:26.036 [main] INFO  KoinStarter - Запуск команды: average_distance
+2023-05-05 01:28:26.037 [main] INFO  Tokenizator - Неверная команда
+2023-05-05 01:28:31.608 [main] INFO  KoinStarter - Запуск команды: help
+2023-05-05 01:28:31.608 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:29:02.588 [main] INFO  KoinStarter - Запуск команды: average_of_distance
+2023-05-05 01:29:02.588 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:29:02.589 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:29:04.612 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:29:06.592 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 01:29:29.270 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 01:29:29.270 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:29:29.270 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:29:29.272 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:29:31.285 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:29:31.286 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:31:02.125 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:31:02.125 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:31:02.126 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:31:02.128 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:31:04.313 [ForkJoinPool.commonPool-worker-3] INFO  ServerModule - Отправлен результат
+2023-05-05 01:31:04.316 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:31:19.128 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:31:19.128 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:31:19.129 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:31:21.133 [ForkJoinPool.commonPool-worker-3] INFO  ServerModule - Отправлен результат
+2023-05-05 01:31:21.134 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:31:37.378 [main] INFO  KoinStarter - Запуск команды: average_of_distance
+2023-05-05 01:31:37.378 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:31:37.379 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:31:39.383 [ForkJoinPool.commonPool-worker-3] INFO  ServerModule - Отправлен результат
+2023-05-05 01:31:39.383 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:32:32.853 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:32:32.853 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:32:32.854 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:32:33.371 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:32:33.372 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:32:33.373 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:32:34.862 [ForkJoinPool.commonPool-worker-3] INFO  ServerModule - Отправлен результат
+2023-05-05 01:32:34.863 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:32:35.389 [ForkJoinPool.commonPool-worker-3] INFO  ServerModule - Отправлен результат
+2023-05-05 01:32:36.863 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 01:33:57.875 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:33:57.876 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:33:57.876 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:33:59.883 [ForkJoinPool.commonPool-worker-4] INFO  ServerModule - Отправлен результат
+2023-05-05 01:34:01.887 [main] INFO  ClientModule - Ответ от сервера не получен
+///////////////////////////////////////////////////////////////////////////////////////2023-05-05 01:44:28.693 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:44:28.704 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:44:33.149 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:44:33.157 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:44:57.794 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 01:45:05.005 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:45:07.049 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:45:07.050 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:45:11.618 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:45:13.625 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:45:13.626 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:45:43.379 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:45:43.379 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:45:43.380 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:45:43.870 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:45:43.870 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:45:43.872 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:45:45.390 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:45:45.391 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:45:45.878 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:45:47.391 [main] INFO  ClientModule - Ответ от сервера не получен
+///////////////////////////////////////////////////////////////////////////////////////////
+2023-05-05 01:51:35.912 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:51:35.923 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:51:40.549 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 01:51:40.557 [main] INFO  KoinStarter - Начало программы
+2023-05-05 01:51:48.643 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 01:51:51.292 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:51:53.330 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:51:53.331 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:51:53.905 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:51:55.912 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:51:55.913 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:51:59.224 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:52:01.231 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 01:52:01.232 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:53:27.302 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:53:27.302 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:53:27.303 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:53:29.319 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:53:29.320 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:53:58.404 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:53:58.405 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:53:58.406 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:54:00.410 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:54:00.411 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:54:22.930 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:54:22.930 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:54:22.931 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:54:23.470 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 01:54:23.470 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 01:54:23.470 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 01:54:24.947 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:54:24.947 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 01:54:25.475 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 01:54:26.942 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:01:30.254 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:01:30.266 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:01:49.798 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:01:49.824 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:01:58.523 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:02:23.994 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:02:29.084 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:02:41.544 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:02:43.101 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:02:46.548 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:03:01.691 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:13:22.267 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:13:22.273 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:13:38.838 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:13:38.848 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:13:51.906 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:17:42.646 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:17:42.655 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:17:48.125 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:17:48.133 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:18:06.969 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:18:11.861 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:18:13.952 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:18:13.953 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:18:19.260 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:18:21.272 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:18:21.272 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:18:40.444 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:18:40.445 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:18:40.445 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:18:40.753 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:18:40.753 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:18:40.754 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:18:42.453 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:18:42.453 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:18:42.760 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:18:45.452 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:23:14.344 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:23:32.431 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 02:23:47.001 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 02:23:56.589 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:23:56.647 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:01.600 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:24:12.231 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:24:12.233 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:12.235 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:12.236 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:18.358 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:24:18.361 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:18.363 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:18.364 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:29.225 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:24:29.229 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:29.230 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:53.689 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:24:53.689 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:24:53.690 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:24:53.694 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:53.694 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:24:54.135 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:24:54.135 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:24:54.137 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:24:54.140 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:24:54.141 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:28:18.212 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:28:55.181 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:28:55.189 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:29:00.303 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:29:00.311 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:29:05.615 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:29:07.997 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:29:07.998 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:29:14.578 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:29:16.671 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:29:16.672 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:29:51.674 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:29:51.674 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:29:51.675 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:29:52.005 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:29:52.005 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:29:52.006 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:29:53.681 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:29:53.681 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:29:54.013 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:29:54.013 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:29:56.690 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:30:41.880 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:30:41.880 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:30:41.881 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:30:43.885 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:30:46.890 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:38:45.548 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:38:45.559 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:38:48.672 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:38:48.682 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:39:01.756 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:39:06.663 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:39:08.707 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:39:08.708 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:39:14.039 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:39:16.047 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:39:16.047 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:39:41.283 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:39:41.284 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:39:41.285 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:39:41.799 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:39:41.800 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:39:41.800 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:39:43.296 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:39:43.297 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:39:43.813 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:39:43.814 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:39:46.291 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:41:57.729 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:42:05.213 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 02:42:19.168 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:42:21.213 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:42:24.184 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:42:30.910 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:42:30.912 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:42:32.923 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:42:32.923 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:42:47.699 [main] INFO  KoinStarter - Запуск команды: log_out
+2023-05-05 02:43:01.436 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:43:03.446 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:43:03.447 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:44:10.911 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:44:10.912 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:44:10.913 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:44:11.379 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:44:11.379 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:44:11.380 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:44:13.055 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 02:44:13.057 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:44:13.417 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
+2023-05-05 02:44:13.419 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:44:15.919 [main] INFO  ClientModule - Ответ от сервера не получен
+2023-05-05 02:50:05.395 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:50:05.404 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:50:13.543 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 02:50:13.552 [main] INFO  KoinStarter - Начало программы
+2023-05-05 02:50:38.710 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 02:50:51.774 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:50:51.807 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:50:51.815 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:50:58.313 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:50:58.317 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:50:58.354 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:51:16.869 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:51:16.870 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:51:16.871 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:51:16.876 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:51:16.876 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:51:17.177 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 02:51:17.178 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:51:17.178 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:51:17.182 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:51:17.183 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:51:36.235 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-05 02:51:36.235 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-05 02:51:42.650 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:51:42.754 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:51:42.754 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 02:51:52.590 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 02:51:52.590 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 02:51:52.591 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 02:51:52.596 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 02:51:52.596 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:19:25.188 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 03:19:25.197 [main] INFO  KoinStarter - Начало программы
+2023-05-05 03:19:31.228 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 03:19:31.236 [main] INFO  KoinStarter - Начало программы
+2023-05-05 03:19:49.256 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 03:22:01.231 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 03:22:11.561 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:22:11.610 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:22:11.611 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:22:20.362 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:22:20.366 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:22:20.403 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:22:29.099 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 03:22:29.134 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 03:22:29.135 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:22:29.138 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:22:29.138 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:22:38.410 [main] INFO  KoinStarter - Запуск команды: clear
+2023-05-05 03:22:38.410 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 03:22:38.411 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:22:38.414 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:22:38.414 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:22:58.867 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-05 03:22:58.868 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-05 03:23:09.401 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:23:09.578 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:23:09.579 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:23:18.999 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 03:23:18.999 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 03:23:18.999 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:23:19.031 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:23:19.032 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:44:18.026 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 03:44:18.034 [main] INFO  KoinStarter - Начало программы
+2023-05-05 03:44:24.837 [main] INFO  ClientModule - Запуск DatagramChannel
+2023-05-05 03:44:24.845 [main] INFO  KoinStarter - Начало программы
+2023-05-05 03:44:35.387 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-05 03:44:43.951 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:44:44.007 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:44:44.008 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:44:49.445 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:44:49.449 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:44:49.485 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:44:57.292 [main] INFO  KoinStarter - Запуск команды: add
+2023-05-05 03:44:57.293 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfObject
+2023-05-05 03:45:02.110 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:45:02.126 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:45:02.127 [main] INFO  ClientModule - Получен ответ от сервера
+2023-05-05 03:45:08.662 [main] INFO  KoinStarter - Запуск команды: show
+2023-05-05 03:45:08.663 [main] INFO  Tokenizator - Начала запуска команды по шаблону listOfNo
+2023-05-05 03:45:08.663 [main] INFO  ClientModule - Запрос отправлен
+2023-05-05 03:45:08.667 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-05 03:45:08.668 [main] INFO  ClientModule - Получен ответ от сервера

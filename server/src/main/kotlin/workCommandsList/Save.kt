@@ -21,16 +21,18 @@ class Save: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 //         val pathToFile = System.getProperty("DataOfCollection.server")
         val pathToFile: String = System.getenv("DATAOFCOLLECTION")
         val collection = PriorityQueue<Route>(RouteComporator())
-         collection.addAll(workWithCollection.getCollection())
-         val list = workWithCollection.collectionToList()
-         val jsonString = serializer.serialize(list)
-         workWithFile.writeToFile(collection, pathToFile, jsonString)
-         workWithResultModule.setMessages("saved")
+        collection.addAll(workWithCollection.getCollection())
+        val list = workWithCollection.collectionToList()
+        val jsonString = serializer.serialize(list)
+        workWithFile.writeToFile(collection, pathToFile, jsonString)
+        workWithResultModule.setMessages("saved")
+        workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
      }
 }

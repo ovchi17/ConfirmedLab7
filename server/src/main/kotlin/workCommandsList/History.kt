@@ -15,7 +15,7 @@ class History: Command() {
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 
         val collection = workWithCollection.getHistory()
         workWithResultModule.setMessages("historyOfCommands")
@@ -24,7 +24,9 @@ class History: Command() {
             resultString = resultString + collection[i] + " "
         }
         workWithResultModule.setMessages(resultString)
+        workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }

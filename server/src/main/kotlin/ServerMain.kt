@@ -9,6 +9,7 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import java.util.concurrent.Executors
 
 fun main() {
 
@@ -21,9 +22,12 @@ fun main() {
     System.setProperty("DataOfCollection.server", "D:\\HOTFIXLABSIX\\untitled\\server\\src\\main\\resources\\DataOfCollection.txt")
     val logger: Logger = LogManager.getLogger(ServerModuleGet::class.java)
     logger.info("Запуск сервера")
+    val threadPoolMain = Executors.newFixedThreadPool(10)
 
     while (true){
+        //threadPoolMain.execute{
         serverModule.serverReceiver()
+        //}
     }
 
 }

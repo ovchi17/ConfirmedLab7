@@ -19,7 +19,7 @@ class RemoveFirst: Command(){
      *
      * @param getArgs arguments
      */
-    override fun execute(getArgs: MutableList<Any>){
+    override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
 
         val collection = PriorityQueue<Route>(RouteComporator())
         collection.addAll(workWithCollection.getCollection())
@@ -30,6 +30,9 @@ class RemoveFirst: Command(){
             workWithCollection.pollCollection()
             workWithResultModule.setMessages("cleared")
         }
+        workWithResultModule.setUniqueKey(uniqueToken)
+
         serverModule.serverSender(workWithResultModule.getResultModule())
+        workWithResultModule.clear()
     }
 }
