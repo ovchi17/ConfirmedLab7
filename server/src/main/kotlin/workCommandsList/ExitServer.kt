@@ -23,6 +23,7 @@ class ExitServer: Command(){
         exitProcess(0)
 
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queue.put(workWithResultModule.getResultModule())
     }
 }

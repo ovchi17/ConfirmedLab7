@@ -17,7 +17,8 @@ class Token: Command() {
         if (resultLog in serverModule.availableTokens.values){
             workWithResultModule.setStatus(Status.ERROR)
             workWithResultModule.setUniqueKey(uniqueToken)
-            serverModule.serverSender(workWithResultModule.getResultModule())
+            //serverModule.serverSender(workWithResultModule.getResultModule())
+            serverModule.queue.put(workWithResultModule.getResultModule())
             workWithResultModule.clear()
         }else{
             val middleResult = resultPas + resultLog.take(10)
@@ -30,7 +31,10 @@ class Token: Command() {
             workWithResultModule.setToken(token)
             workWithResultModule.setUniqueKey(uniqueToken)
             serverModule.availableTokens[hashSHA.toSha(token)] = resultLog
-            serverModule.serverSender(workWithResultModule.getResultModule())
+
+            //serverModule.serverSender(workWithResultModule.getResultModule())
+            serverModule.queue.put(workWithResultModule.getResultModule())
+
             workWithResultModule.clear()
         }
         }

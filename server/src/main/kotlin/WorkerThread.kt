@@ -44,14 +44,16 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
                     serverModule.availableTokens.remove(hashSHA.toSha(getInfo.token))
                     workWithResultModule.setStatus(Status.SUCCESS)
                     workWithResultModule.setUniqueKey(getInfo.uniqueKey)
-                    serverModule.serverSender(workWithResultModule.getResultModule())
+                    //serverModule.serverSender(workWithResultModule.getResultModule())
+                    serverModule.queue.put(workWithResultModule.getResultModule())
                     workWithResultModule.clear()
                 }
             }else{
                 workWithResultModule.setStatus(Status.ERROR)
                 workWithResultModule.setError("noToken")
                 workWithResultModule.setUniqueKey(getInfo.uniqueKey)
-                serverModule.serverSender(workWithResultModule.getResultModule())
+                //serverModule.serverSender(workWithResultModule.getResultModule())
+                serverModule.queue.put(workWithResultModule.getResultModule())
                 workWithResultModule.clear()
             }
         } catch (e: InterruptedException) {

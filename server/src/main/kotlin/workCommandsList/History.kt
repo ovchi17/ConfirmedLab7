@@ -26,7 +26,8 @@ class History: Command() {
         workWithResultModule.setMessages(resultString)
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queue.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

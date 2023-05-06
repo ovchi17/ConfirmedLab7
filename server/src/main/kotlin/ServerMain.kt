@@ -25,9 +25,8 @@ fun main() {
     val threadPoolMain = Executors.newFixedThreadPool(10)
 
     while (true){
-        //threadPoolMain.execute{
         serverModule.serverReceiver()
-        //}
+        serverModule.serverSender()
     }
 
 }
@@ -38,3 +37,7 @@ class ServerModuleGet : KoinComponent{
         return serverModule
     }
 }
+
+// Facade pattern
+//Блокирующая очередь, TP1(обработка) -> очередь(блокирующая) -> TP2(выполнение команды) -> очередь(блокирующая) -> ТP3(отправка)
+//JDBC bdconfig

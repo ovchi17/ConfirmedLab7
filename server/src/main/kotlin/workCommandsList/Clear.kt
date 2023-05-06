@@ -23,7 +23,8 @@ class Clear: Command() {
         workWithResultModule.setMessages("cleared")
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queue.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

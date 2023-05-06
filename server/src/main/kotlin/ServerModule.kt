@@ -12,6 +12,7 @@ import java.net.DatagramSocket
 import java.nio.channels.Selector
 import java.util.concurrent.Executors
 import java.util.concurrent.ForkJoinPool
+import java.util.concurrent.LinkedBlockingQueue
 
 /**
  * Class ServerModule.
@@ -20,18 +21,18 @@ import java.util.concurrent.ForkJoinPool
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2043)
+    var socket = DatagramSocket(2046)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
     val packet = DatagramPacket(buffer, buffer.size)
-    val selector = Selector.open()
     val logger: Logger = LogManager.getLogger(ServerModule::class.java)
     val availableTokens = mutableMapOf<String, String>()
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPool = Executors.newFixedThreadPool(10)
     val executor = Executors.newFixedThreadPool(5)
+    val queue = LinkedBlockingQueue<ResultModule>()
     var ct = 0
 
     /**
@@ -41,10 +42,9 @@ class ServerModule {
     fun serverReceiver(){
         ct++
         socket.receive(packet)
-        executor.execute {
-            val worker: Runnable = WorkerThread(packet, ct)
-            threadPool.execute(worker)
-        }
+        println("received $ct")
+        val worker: Runnable = WorkerThread(packet, ct)
+        threadPool.execute(worker)
     }
 
     /**
@@ -52,8 +52,10 @@ class ServerModule {
      *
      * @param result arguments
      */
-    fun serverSender(result: ResultModule){
+    fun serverSender(){
         ForkJoinPool.commonPool().execute{
+            println("got $ct")
+            var  result = queue.take()
             val json = gson.toJson(result)
             val changedToBytes = json.toByteArray()
             val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
