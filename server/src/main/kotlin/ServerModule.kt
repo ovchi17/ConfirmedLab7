@@ -21,7 +21,7 @@ import java.util.concurrent.LinkedBlockingQueue
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2046)
+    var socket = DatagramSocket(2056)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
@@ -30,9 +30,11 @@ class ServerModule {
     val availableTokens = mutableMapOf<String, String>()
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
-    val threadPool = Executors.newFixedThreadPool(10)
+    val threadPoolReceiver = Executors.newFixedThreadPool(10)
+    val threadPoolExecutor = Executors.newFixedThreadPool(10)
     val executor = Executors.newFixedThreadPool(5)
-    val queue = LinkedBlockingQueue<ResultModule>()
+    val queueRecExe = LinkedBlockingQueue<ResultModule>()
+    val queueExeSen = LinkedBlockingQueue<ResultModule>()
     var ct = 0
 
     /**
@@ -40,11 +42,23 @@ class ServerModule {
      *
      */
     fun serverReceiver(){
-        ct++
-        socket.receive(packet)
-        println("received $ct")
-        val worker: Runnable = WorkerThread(packet, ct)
-        threadPool.execute(worker)
+        while (true){
+            ct++
+            socket.receive(packet)
+            println("Receiver got $ct")
+            val worker: Runnable = WorkerThread(packet, ct)
+            threadPoolReceiver.execute(worker)
+        }
+    }
+
+    fun commandExecutor(){
+        while (true){
+            var resModel = queueRecExe.take()
+            println("Exe got $ct")
+            println(resModel)
+            val workerCommand: Runnable = WorkerThreadCommand(resModel, ct)
+            threadPoolExecutor.execute(workerCommand)
+        }
     }
 
     /**
@@ -52,16 +66,22 @@ class ServerModule {
      *
      * @param result arguments
      */
-    fun serverSender(){
-        ForkJoinPool.commonPool().execute{
-            println("got $ct")
-            var  result = queue.take()
-            val json = gson.toJson(result)
-            val changedToBytes = json.toByteArray()
-            val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
-            println(result.msgToPrint + "alert!!")
-            logger.info("Отправлен результат")
-            socket.send(packetToSend)
+    fun serverSender() {
+        while (true) {
+            if (!queueExeSen.isEmpty()){
+                var result = queueExeSen.take()
+                println(queueExeSen)
+                ForkJoinPool.commonPool().execute {
+                    println("Sender got $ct")
+                    val json = gson.toJson(result)
+                    val changedToBytes = json.toByteArray()
+                    val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
+                    println(result)
+                    logger.info("Отправлен результат")
+                    socket.send(packetToSend)
+                    println("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                }
+            }
         }
     }
 

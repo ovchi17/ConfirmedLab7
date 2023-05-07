@@ -10,6 +10,7 @@ import java.net.DatagramSocket
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import java.util.concurrent.Executors
+import kotlin.concurrent.thread
 
 fun main() {
 
@@ -24,10 +25,10 @@ fun main() {
     logger.info("Запуск сервера")
     val threadPoolMain = Executors.newFixedThreadPool(10)
 
-    while (true){
-        serverModule.serverReceiver()
-        serverModule.serverSender()
-    }
+    thread { serverModule.serverReceiver() }
+    thread { serverModule.commandExecutor() }
+    thread { serverModule.serverSender() }
+
 
 }
 

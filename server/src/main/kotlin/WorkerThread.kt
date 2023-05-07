@@ -20,9 +20,7 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
 
     override fun run() {
         println("START | thread $ct")
-        synchronized(this){
             processingCommand()
-        }
         println("END | thread $ct")
     }
 
@@ -32,20 +30,22 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
             val json = String(packet.data, 0, packet.length)
             val getInfo = gson.fromJson(json, ResultModule::class.java)
             if (getInfo.token == "Update"){
-                commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, "noNeed", getInfo.uniqueKey)
+                //commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, "noNeed", getInfo.uniqueKey)
+                serverModule.queueRecExe.put(getInfo)
             } else if (hashSHA.toSha(getInfo.token) in serverModule.availableTokens.keys){
                 if (getInfo.commandName != "sessionIsOver"){
                     println("====================================================")
                     println(getInfo)
                     println("====================================================")
-                    serverModule.availableTokens.get(hashSHA.toSha(getInfo.token))
-                        ?.let { commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, it, getInfo.uniqueKey) }
+                    //serverModule.availableTokens.get(hashSHA.toSha(getInfo.token))
+                    //    ?.let { commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, it, getInfo.uniqueKey) }
+                    serverModule.queueRecExe.put(getInfo)
                 }else{
                     serverModule.availableTokens.remove(hashSHA.toSha(getInfo.token))
                     workWithResultModule.setStatus(Status.SUCCESS)
                     workWithResultModule.setUniqueKey(getInfo.uniqueKey)
                     //serverModule.serverSender(workWithResultModule.getResultModule())
-                    serverModule.queue.put(workWithResultModule.getResultModule())
+                    serverModule.queueExeSen.put(workWithResultModule.getResultModule())
                     workWithResultModule.clear()
                 }
             }else{
@@ -53,7 +53,7 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
                 workWithResultModule.setError("noToken")
                 workWithResultModule.setUniqueKey(getInfo.uniqueKey)
                 //serverModule.serverSender(workWithResultModule.getResultModule())
-                serverModule.queue.put(workWithResultModule.getResultModule())
+                serverModule.queueExeSen.put(workWithResultModule.getResultModule())
                 workWithResultModule.clear()
             }
         } catch (e: InterruptedException) {

@@ -25,7 +25,7 @@ class Info: Command() {
         workWithResultModule.setUniqueKey(uniqueToken)
 
         //serverModule.serverSender(workWithResultModule.getResultModule())
-        serverModule.queue.put(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

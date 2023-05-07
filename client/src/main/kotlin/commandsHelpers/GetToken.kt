@@ -18,7 +18,7 @@ class GetToken: KoinComponent {
         val sendList = mutableListOf<Any>()
         sendList.add(logPass)
         clientModule.sender("token", sendList, "Update")
-        val resultAnswer = clientModule.receiver()
+        val resultAnswer = clientModule.receiver(0)
         if (resultAnswer.status == Status.TOKEN){
             answerToUser.writeToConsoleLn("Успешно! Ваш токен: ${resultAnswer.token}")
             return true

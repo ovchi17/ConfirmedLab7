@@ -7,6 +7,7 @@ import moduleWithResults.Status
 import moduleWithResults.WorkWithResultModule
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import org.koin.core.context.unloadKoinModules
 import usersView.AnswerToUser
 import java.net.DatagramPacket
 import java.net.InetAddress
@@ -28,7 +29,7 @@ class ClientModule() {
     private lateinit var channel: DatagramChannel
     val answerToUser = AnswerToUser()
     private val nameHost: String = "localhost"
-    private val namePort: Int = 2046
+    private val namePort: Int = 2056
     val gson = Gson()
     val logger: Logger = LogManager.getLogger(ClientModule::class.java)
     val keyGenerator: KeyGenerator = KeyGenerator()
@@ -70,6 +71,7 @@ class ClientModule() {
         data.setToken(token)
         data.setUniqueKey(key)
         val json = gson.toJson(data.getResultModule())
+        data.clear()
         val buffer = ByteBuffer.wrap(json.toByteArray())
         val address = InetSocketAddress(nameHost, namePort)
         logger.info("Запрос отправлен")
@@ -81,11 +83,25 @@ class ClientModule() {
     *
     * @return ResultModule from server
     */
-    fun receiver():ResultModule{
+    fun receiver(ct: Int):ResultModule{
+        val counter = ct
+        var result: ResultModule = ResultModule(mutableListOf(), Status.ERROR, "noAnswer", "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken", "noKey")
+        while (ct < 3){
+            val trashForOneTime = receiverHelper()
+            if (trashForOneTime.status != Status.ERROR){
+                result = trashForOneTime
+                break
+            }
+        }
+        return result
+
+    }
+
+    fun receiverHelper(): ResultModule{
         val selector = Selector.open()
         channel.configureBlocking(false)
         channel.register(selector, SelectionKey.OP_READ)
-        selector.select(5000)
+        selector.select(350)
         val selectedKeys = selector.selectedKeys()
         if (selectedKeys.isEmpty()) {
             logger.info("Ответ от сервера не получен")
@@ -98,9 +114,11 @@ class ClientModule() {
             val resultStr = String(bytesReceiver, 0, bufferReceive.position())
             val getInfo = gson.fromJson(resultStr, ResultModule::class.java)
             if (getInfo.uniqueKey != key){
-                receiver()
+                return ResultModule(mutableListOf(), Status.ERROR, "noAnswer", "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken", "noKey")
             }
             return getInfo
         }
     }
+
+
 }

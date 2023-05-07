@@ -24,6 +24,6 @@ class ExitServer: Command(){
 
 
         //serverModule.serverSender(workWithResultModule.getResultModule())
-        serverModule.queue.put(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
     }
 }
