@@ -26,6 +26,7 @@ data class Route(
     var to: Location,
     var distance: Long,
     var coordinates: Coordinates,
+    var owner: String
 )
 
 
@@ -37,7 +38,8 @@ fun main(){
         from = Location(2,2,3),
         to = Location(4,4,5),
         distance = 100,
-        coordinates = Coordinates(1, 2)
+        coordinates = Coordinates(1, 2),
+        owner = "merin"
     )
     //println(Json.encodeToString(route))
 }

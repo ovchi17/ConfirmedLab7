@@ -19,6 +19,8 @@ class DataBaseManager(){
                     "(id, name, \"creationDate\", location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner) " +
                     "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
         )
+    val clearStatement = connectionDB.prepareStatement("delete from public.\"Route\";")
+    val deleteRouteStatment = connectionDB.prepareStatement("delete from public.\"Route\" where(public.\"Route\".id = ?);")
 
     fun connect(): Connection {
         try {
@@ -57,5 +59,31 @@ class DataBaseManager(){
             println("Smth wrong in addRoute")
         }
     }
+
+    fun clearRoute(){
+        try{
+            clearStatement.executeUpdate()
+        }catch (e: SQLException) {
+            println(e.message)
+            println("Smth wrong in clearRoute")
+        }
+    }
+
+    fun deleteRoute(id: Long){
+        try{
+            deleteRouteStatment.setLong(1, id)
+            deleteRouteStatment.executeUpdate()
+        }catch (e: SQLException) {
+            println(e.message)
+            println("Smth wrong in deleteRoute")
+        }
+    }
+
+    fun updateRoute(id: Long, name: String, creationDate: LocalDate, location11: Long, location12: Long, location13: Int, location21: Long, location22: Long, location23: Int, distance: Long, coordinates1: Long, coordinates2: Long, owner: String){
+        deleteRoute(id)
+        addRoute(id, name, creationDate, location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner)
+    }
+
+
 
 }

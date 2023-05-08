@@ -1,5 +1,6 @@
 package workCommandsList
 
+import ShaBuilder
 import dataSet.Route
 import dataSet.RouteComporator
 import moduleWithResults.ResultModule
@@ -22,6 +23,8 @@ class RemoveById: Command() {
 
         val checkId = (getArgs[0] as Double).toLong()
         var setMessageForMoreThenOne = "noId"
+        val hashSHA = ShaBuilder()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         val collection = PriorityQueue<Route>(RouteComporator())
         collection.addAll(workWithCollection.getCollection())
@@ -29,7 +32,9 @@ class RemoveById: Command() {
         if (collection.size == 0){
             workWithResultModule.setMessages("emptyCollection")
         }else if(collection.size == 1){
-            if (collection.peek().id == checkId){
+            val checkObject = collection.peek()
+            if (checkObject.id == checkId && checkObject.owner == owner){
+                dbModule.deleteRoute(checkObject.id)
                 workWithCollection.clearCollection()
                 workWithResultModule.setMessages("cleared")
             }else{
@@ -38,7 +43,9 @@ class RemoveById: Command() {
         }else{
             workWithCollection.clearCollection()
             for (i in 0..collection.size - 1){
-                if (collection.peek().id == checkId){
+                val checkObject = collection.peek()
+                if (checkObject.id == checkId && checkObject.owner == owner) {
+                    dbModule.deleteRoute(checkObject.id)
                     collection.poll()
                     setMessageForMoreThenOne = "cleared"
                 }else{

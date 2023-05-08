@@ -43,6 +43,7 @@ class Add: Command() {
         val location2_2: Long = (str[7] as Double).toLong()
         val location3_2: Int = (str[8] as Double).toInt()
         distance = (str[9] as Double).toLong()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         coordinates = Coordinates(coord1, coord2)
         to = Location(location1, location2, location3)
@@ -55,7 +56,8 @@ class Add: Command() {
             creationDate = creationDate,
             from = from,
             to = to,
-            distance = distance
+            distance = distance,
+            owner = owner
         )
 
         workWithCollection.addElementToCollection(routeToAdd)

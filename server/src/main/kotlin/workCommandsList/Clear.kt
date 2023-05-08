@@ -19,7 +19,7 @@ class Clear: Command() {
     override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String) {
 
         workWithCollection.clearCollection()
-
+        dbModule.clearRoute()
         workWithResultModule.setMessages("cleared")
         workWithResultModule.setUniqueKey(uniqueToken)
 
