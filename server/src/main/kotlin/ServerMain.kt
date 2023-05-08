@@ -19,6 +19,8 @@ fun main() {
     }
 
     val serverModule = ServerModuleGet().returnServerModule()
+    val dataBaseManager = ServerModuleGet().returnDatabase()
+    dataBaseManager.connectionDB
     System.setProperty("log4j.configurationFile", "classpath:log4j2.xml")
     System.setProperty("DataOfCollection.server", "D:\\HOTFIXLABSIX\\untitled\\server\\src\\main\\resources\\DataOfCollection.txt")
     val logger: Logger = LogManager.getLogger(ServerModuleGet::class.java)
@@ -34,8 +36,13 @@ fun main() {
 
 class ServerModuleGet : KoinComponent{
     val serverModule: ServerModule by inject()
+    val dbModule: DataBaseManager by inject()
     fun returnServerModule():ServerModule{
         return serverModule
+    }
+
+    fun returnDatabase(): DataBaseManager{
+        return  dbModule
     }
 }
 

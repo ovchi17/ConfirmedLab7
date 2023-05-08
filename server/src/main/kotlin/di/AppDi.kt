@@ -1,5 +1,6 @@
 package di
 
+import DataBaseManager
 import ServerModule
 import controllers.*
 import moduleWithResults.WorkWithResultModule
@@ -30,6 +31,10 @@ val serverModule = module {
 
     single {
         ServerModule()
+    }
+
+    single {
+        DataBaseManager()
     }
 
 }

@@ -1,5 +1,6 @@
 package workCommandsList
 
+import DataBaseManager
 import ServerModule
 import controllers.*
 import moduleWithResults.ResultModule
@@ -20,6 +21,7 @@ abstract class Command(): KoinComponent {
     val serializer: Serializer by inject()
     val workWithResultModule: WorkWithResultModule by inject()
     val serverModule: ServerModule by inject()
+    val dbModule: DataBaseManager by inject()
 
     /**
      * execute method. Using in all workCommandsList
