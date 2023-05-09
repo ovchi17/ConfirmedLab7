@@ -39,6 +39,7 @@ class RemoveById: Command() {
                 workWithResultModule.setMessages("cleared")
             }else{
                 workWithResultModule.setMessages("noId")
+                workWithResultModule.setMessages("notYou")
             }
         }else{
             workWithCollection.clearCollection()
@@ -54,6 +55,9 @@ class RemoveById: Command() {
                 }
             }
             workWithResultModule.setMessages(setMessageForMoreThenOne)
+            if (setMessageForMoreThenOne == "cleared"){
+                workWithResultModule.setMessages("notYou")
+            }
         }
         workWithResultModule.setUniqueKey(uniqueToken)
 

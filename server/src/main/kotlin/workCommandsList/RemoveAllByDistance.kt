@@ -38,6 +38,7 @@ class RemoveAllByDistance: Command() {
                 workWithResultModule.setMessages("cleared")
             }else{
                 workWithResultModule.setMessages("noDistance")
+                workWithResultModule.setMessages("notYou")
             }
         }else{
             workWithCollection.clearCollection()

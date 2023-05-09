@@ -36,6 +36,8 @@ class RemoveFirst: Command(){
                     dbModule.deleteRoute(checkObject.id)
                     workWithCollection.pollCollection()
                     workWithResultModule.setMessages("cleared")
+                }else{
+                    workWithResultModule.setMessages("notYou")
                 }
             }
         }

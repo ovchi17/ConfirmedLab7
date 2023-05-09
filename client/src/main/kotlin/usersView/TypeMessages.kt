@@ -60,7 +60,8 @@ class TypeMessages {
         "changeToCollPQ" to "Коллекция изменена на PriorityQueue",
         "changeToCollLL" to "Коллекция изменена на LinkedList",
         "noAnswer" to "Ответ от сервера не поступил",
-        "noToken" to "Такого токена не существет"
+        "noToken" to "Такого токена не существет",
+        "notYou" to "Или вы пытаетесь удалить не ваш объект"
     )
 
     /**

@@ -1,5 +1,11 @@
+import controllers.CollectionMainCommands
+import controllers.WorkWithCollection
 import dataSet.Coordinates
+import dataSet.Location
+import dataSet.Route
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
+import org.koin.java.KoinJavaComponent.inject
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
@@ -7,11 +13,12 @@ import java.time.LocalDate
 import java.time.ZoneId
 import java.util.*
 
-class DataBaseManager(){
+class DataBaseManager(): KoinComponent{
 
     val user = "postgres"
     val pas = "admin"
     val url = "jdbc:postgresql://localhost:5433/studs"
+    val workWithCollection: CollectionMainCommands by inject()
     val connectionDB = connect()
     val adderRoute =
         connectionDB.prepareStatement(
@@ -21,6 +28,7 @@ class DataBaseManager(){
         )
     val clearStatement = connectionDB.prepareStatement("delete from public.\"Route\";")
     val deleteRouteStatment = connectionDB.prepareStatement("delete from public.\"Route\" where(public.\"Route\".id = ?);")
+    val allRoute = connectionDB.prepareStatement("SELECT * FROM public.\"Route\";")
 
     fun connect(): Connection {
         try {
@@ -84,6 +92,32 @@ class DataBaseManager(){
         addRoute(id, name, creationDate, location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner)
     }
 
+    fun uploadAllRoutes(){
+        try{
+            val allRoutes= allRoute.executeQuery()
+            while (allRoutes.next()){
+                val coordinates = Coordinates(allRoutes.getLong("coordinates1"), allRoutes.getLong("coordinates2"))
+                val to = Location(allRoutes.getLong("location11"), allRoutes.getLong("location12"), allRoutes.getInt("location13"))
+                val from = Location(allRoutes.getLong("location21"), allRoutes.getLong("location22"), allRoutes.getInt("location23"))
 
+                val routeToAdd: Route = Route(
+                    allRoutes.getLong("id"),
+                    name = allRoutes.getString("name"),
+                    coordinates = coordinates,
+                    creationDate = allRoutes.getDate("creationDate").toLocalDate(),
+                    from = from,
+                    to = to,
+                    distance = allRoutes.getLong("distance"),
+                    owner = allRoutes.getString("owner")
+                )
+
+                workWithCollection.addElementToCollection(routeToAdd)
+
+            }
+        }catch (e: SQLException) {
+            println(e.message)
+            println("Smth wrong in deleteRoute")
+        }
+    }
 
 }
