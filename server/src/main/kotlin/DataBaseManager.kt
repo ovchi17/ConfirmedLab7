@@ -3,6 +3,7 @@ import controllers.WorkWithCollection
 import dataSet.Coordinates
 import dataSet.Location
 import dataSet.Route
+import di.serverModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.java.KoinJavaComponent.inject
@@ -19,6 +20,7 @@ class DataBaseManager(): KoinComponent{
     val pas = "admin"
     val url = "jdbc:postgresql://localhost:5433/studs"
     val workWithCollection: CollectionMainCommands by inject()
+    val serverModule: ServerModule by inject()
     val connectionDB = connect()
     val adderRoute =
         connectionDB.prepareStatement(
@@ -29,6 +31,14 @@ class DataBaseManager(): KoinComponent{
     val clearStatement = connectionDB.prepareStatement("delete from public.\"Route\";")
     val deleteRouteStatment = connectionDB.prepareStatement("delete from public.\"Route\" where(public.\"Route\".id = ?);")
     val allRoute = connectionDB.prepareStatement("SELECT * FROM public.\"Route\";")
+    val allLogin = connectionDB.prepareStatement("SELECT * FROM public.\"Login\"")
+    val deleteLogin = connectionDB.prepareStatement("delete from public.\"Login\"")
+    val insertLogin =
+        connectionDB.prepareStatement(
+            "insert into public.\"Login\" " +
+                    "(login, token, valid, status) " +
+                    "values(?, ?, ?, ?);"
+        )
 
     fun connect(): Connection {
         try {
@@ -116,7 +126,45 @@ class DataBaseManager(): KoinComponent{
             }
         }catch (e: SQLException) {
             println(e.message)
-            println("Smth wrong in deleteRoute")
+            println("Smth wrong in uploadAllRoutes")
+        }
+    }
+
+    fun uploadAllLogins(){
+        try{
+            val allLogins= allLogin.executeQuery()
+            while (allLogins.next()){
+                val login = allLogins.getString("login")
+                val token = allLogins.getString("token")
+                val valid = allLogins.getBoolean("valid")
+                val status = allLogins.getString("status")
+                serverModule.availableTokens[token] = login
+                serverModule.tokenToValid[token] = valid
+                serverModule.tokenToStatus[token] = status
+            }
+        }catch (e: SQLException) {
+            println(e.message)
+            println("Smth wrong in uploadAllLogins")
+        }
+    }
+
+    fun clearLogin(){
+        try{
+            deleteLogin.executeUpdate()
+        }catch (e: SQLException) {
+            println(e.message)
+            println("Smth wrong in clearLogin")
+        }
+    }
+
+    fun loadAllLogins(tokens: Set<String>){
+        clearLogin()
+        for (tkn in tokens){
+            insertLogin.setString(1, serverModule.availableTokens[tkn])
+            insertLogin.setString(2, tkn)
+            serverModule.tokenToValid[tkn]?.let { insertLogin.setBoolean(3, it) }
+            insertLogin.setString(4, serverModule.tokenToStatus[tkn])
+            insertLogin.execute()
         }
     }
 

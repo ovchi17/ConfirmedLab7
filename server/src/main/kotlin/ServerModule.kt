@@ -21,7 +21,7 @@ import java.util.concurrent.LinkedBlockingQueue
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2058)
+    var socket = DatagramSocket(2022)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)

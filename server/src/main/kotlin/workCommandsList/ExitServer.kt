@@ -19,11 +19,13 @@ class ExitServer: Command(){
      */
     override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
         //workWithResultModule.setMessages("end")
+        dbModule.loadAllLogins(serverModule.availableTokens.keys)
         workWithResultModule.setUniqueKey(uniqueToken)
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         exitProcess(0)
 
 
         //serverModule.serverSender(workWithResultModule.getResultModule())
-        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
+
     }
 }
