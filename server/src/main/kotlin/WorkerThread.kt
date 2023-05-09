@@ -29,10 +29,10 @@ class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent
             ct++
             val json = String(packet.data, 0, packet.length)
             val getInfo = gson.fromJson(json, ResultModule::class.java)
-            if (getInfo.token == "Update"){
+            if (getInfo.token == "Update" || getInfo.commandName == "log_out"){
                 //commandStarter.mp(getInfo.commandName)?.execute(getInfo.args, "noNeed", getInfo.uniqueKey)
                 serverModule.queueRecExe.put(getInfo)
-            } else if (hashSHA.toSha(getInfo.token) in serverModule.availableTokens.keys){
+            } else if (hashSHA.toSha(getInfo.token) in serverModule.availableTokens.keys && serverModule.tokenToValid[hashSHA.toSha(getInfo.token)] === true){
                 if (getInfo.commandName != "sessionIsOver"){
                     println("====================================================")
                     println(getInfo)

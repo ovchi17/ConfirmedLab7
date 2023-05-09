@@ -28,6 +28,8 @@ class ServerModule {
     val packet = DatagramPacket(buffer, buffer.size)
     val logger: Logger = LogManager.getLogger(ServerModule::class.java)
     val availableTokens = mutableMapOf<String, String>()
+    val tokenToValid = mutableMapOf<String, Boolean>()
+    val tokenToStatus = mutableMapOf<String, String>()
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPoolReceiver = Executors.newFixedThreadPool(10)
@@ -109,6 +111,7 @@ class CommandStarter(): KoinComponent{
     val filterLessThanDistance: FilterLessThanDistance = FilterLessThanDistance()
     val switch: Switch = Switch()
     val token: Token = Token()
+    val logOut: LogOut = LogOut()
 
     fun mp(command: String): Command? {
 
@@ -130,7 +133,8 @@ class CommandStarter(): KoinComponent{
             "average_of_distance" to averageOfDistance,
             "filter_less_than_distance" to filterLessThanDistance,
             "switch" to switch,
-            "token" to token)
+            "token" to token,
+            "log_out" to logOut)
 
         if (command in COMMANDS) {
             workWithCollection.historyUpdate(command)

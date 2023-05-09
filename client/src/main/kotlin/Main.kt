@@ -28,6 +28,7 @@ fun main() {
     System.setProperty("log4j.configurationFile", "classpath:log4j2.xml")
     val logger: Logger = LogManager.getLogger(KoinStarter::class.java)
     var authorizationFlag = false
+    val sendList = mutableListOf<Any>()
 
     writeToConsole.writeToConsoleLn("Для получения списка команд введите: help")
     clientModule.start()
@@ -47,6 +48,8 @@ fun main() {
             }
             logger.info("Запуск команды: $command")
             if (command == "log_out"){
+                clientModule.sender("log_out", sendList, tkn)
+                clientModule.receiver(0)
                 writeToConsole.writeToConsoleLn("Вы вышли из профиля")
                 authorizationFlag = false
                 writeToConsole.writeToConsoleLn("Завершить работу консольного приложения Y/N")

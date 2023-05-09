@@ -88,7 +88,7 @@ class ClientModule() {
         var result: ResultModule = ResultModule(mutableListOf(), Status.ERROR, "noAnswer", "noCommand", mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf(), "noToken", "noKey")
         while (ct < 3){
             val trashForOneTime = receiverHelper()
-            if (trashForOneTime.status != Status.ERROR){
+            if (trashForOneTime.uniqueKey == key){
                 result = trashForOneTime
                 break
             }
