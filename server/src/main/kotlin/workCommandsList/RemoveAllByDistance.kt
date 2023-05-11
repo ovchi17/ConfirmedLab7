@@ -1,5 +1,6 @@
 package workCommandsList
 
+import ShaBuilder
 import dataSet.Route
 import dataSet.RouteComporator
 import moduleWithResults.ResultModule
@@ -24,20 +25,27 @@ class RemoveAllByDistance: Command() {
 
         val collection = PriorityQueue<Route>(RouteComporator())
         collection.addAll(workWithCollection.getCollection())
+        val hashSHA = ShaBuilder()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         if (collection.size == 0){
             workWithResultModule.setMessages("emptyCollection")
         }else if(collection.size == 1){
-            if (collection.peek().distance == checkDistance){
+            val checkObject = collection.peek()
+            if (checkObject.distance == checkDistance && checkObject.owner == owner){
                 workWithCollection.clearCollection()
+                dbModule.deleteRoute(checkObject.id)
                 workWithResultModule.setMessages("cleared")
             }else{
                 workWithResultModule.setMessages("noDistance")
+                workWithResultModule.setMessages("notYou")
             }
         }else{
             workWithCollection.clearCollection()
             for (i in 0..collection.size - 1){
-                if (collection.peek().distance == checkDistance){
+                val checkObject = collection.peek()
+                if (checkObject.distance == checkDistance && checkObject.owner == owner){
+                    dbModule.deleteRoute(checkObject.id)
                     collection.poll()
                     workWithResultModule.setMessages("cleared")
                 }else{
@@ -48,7 +56,8 @@ class RemoveAllByDistance: Command() {
         }
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

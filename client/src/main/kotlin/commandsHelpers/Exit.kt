@@ -22,7 +22,7 @@ class Exit: KoinComponent {
     fun execute(token: String){
         val sendList = mutableListOf<Any>()
         clientModule.sender("sessionIsOver", sendList, token)
-        val resultAnswer = clientModule.receiver()
+        val resultAnswer = clientModule.receiver(0)
         clientModule.stop()
 
         exitProcess(0)

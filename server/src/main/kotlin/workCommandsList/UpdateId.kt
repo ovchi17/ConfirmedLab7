@@ -1,5 +1,6 @@
 package workCommandsList
 
+import ShaBuilder
 import dataSet.Coordinates
 import dataSet.Location
 import dataSet.Route
@@ -31,18 +32,20 @@ class UpdateId: Command() {
         val to: Location
         val distance: Long
         val stopper: Long = 1
+        val hashSHA = ShaBuilder()
 
         name = str[0] as String
-        val coord1: Long? = (str[1] as Double).toLong()
-        val coord2: Long? = (str[2] as Double).toLong()
-        val location1: Long? = (str[3] as Double).toLong()
-        val location2: Long? = (str[4] as Double).toLong()
-        val location3: Int? = (str[5] as Double).toInt()
-        val location1_2: Long? = (str[6] as Double).toLong()
-        val location2_2: Long? = (str[7] as Double).toLong()
-        val location3_2: Int? = (str[8] as Double).toInt()
+        val coord1: Long = (str[1] as Double).toLong()
+        val coord2: Long = (str[2] as Double).toLong()
+        val location1: Long = (str[3] as Double).toLong()
+        val location2: Long = (str[4] as Double).toLong()
+        val location3: Int = (str[5] as Double).toInt()
+        val location1_2: Long = (str[6] as Double).toLong()
+        val location2_2: Long = (str[7] as Double).toLong()
+        val location3_2: Int = (str[8] as Double).toInt()
         distance = (str[9] as Double).toLong()
         id = (str[10] as Double).toLong()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         coordinates = Coordinates(coord1, coord2)
         to = Location(location1, location2, location3)
@@ -55,7 +58,8 @@ class UpdateId: Command() {
             creationDate = creationDate,
             from = from,
             to = to,
-            distance = distance
+            distance = distance,
+            owner = owner
         )
 
         val collection = PriorityQueue<Route>(RouteComporator())
@@ -66,17 +70,21 @@ class UpdateId: Command() {
             workWithResultModule.setMessages("emptyCollection")
         }else if(collection.size == 1){
             workWithCollection.clearCollection()
-            if (collection.peek().id == id){
+            val checkObject = collection.peek()
+            if (checkObject.id == id && checkObject.owner == owner){
                 workWithCollection.addElementToCollection(routeToAdd)
+                dbModule.addRoute(id, name, creationDate, location1, location2, location3, location1_2, location2_2, location3_2, distance, coord1, coord2, owner)
                 workWithResultModule.setMessages("success")
             }else{
                 workWithResultModule.setMessages("noId")
+                workWithResultModule.setMessages("или нет доступа к объекту")
                 workWithCollection.addElementToCollection(collection.peek())
             }
         }else{
             workWithCollection.clearCollection()
             for (i in 0..collection.size - 1){
-                if (collection.peek().id == id){
+                var checkObject = collection.peek()
+                if (checkObject.id == id && checkObject.owner == owner){
                     workWithCollection.addElementToCollection(routeToAdd)
                     workWithResultModule.setMessages("success")
                     collection.poll()
@@ -89,7 +97,8 @@ class UpdateId: Command() {
 
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

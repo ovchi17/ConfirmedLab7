@@ -12,6 +12,7 @@ import java.net.DatagramSocket
 import java.nio.channels.Selector
 import java.util.concurrent.Executors
 import java.util.concurrent.ForkJoinPool
+import java.util.concurrent.LinkedBlockingQueue
 
 /**
  * Class ServerModule.
@@ -20,18 +21,22 @@ import java.util.concurrent.ForkJoinPool
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2043)
+    var socket = DatagramSocket(2022)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
     val packet = DatagramPacket(buffer, buffer.size)
-    val selector = Selector.open()
     val logger: Logger = LogManager.getLogger(ServerModule::class.java)
     val availableTokens = mutableMapOf<String, String>()
+    val tokenToValid = mutableMapOf<String, Boolean>()
+    val tokenToStatus = mutableMapOf<String, String>()
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
-    val threadPool = Executors.newFixedThreadPool(10)
+    val threadPoolReceiver = Executors.newFixedThreadPool(10)
+    val threadPoolExecutor = Executors.newFixedThreadPool(10)
     val executor = Executors.newFixedThreadPool(5)
+    val queueRecExe = LinkedBlockingQueue<ResultModule>()
+    val queueExeSen = LinkedBlockingQueue<ResultModule>()
     var ct = 0
 
 
@@ -40,11 +45,22 @@ class ServerModule {
      *
      */
     fun serverReceiver(){
-        ct++
-        socket.receive(packet)
-        executor.execute {
+        while (true){
+            ct++
+            socket.receive(packet)
+            println("Receiver got $ct")
             val worker: Runnable = WorkerThread(packet, ct)
-            threadPool.execute(worker)
+            threadPoolReceiver.execute(worker)
+        }
+    }
+
+    fun commandExecutor(){
+        while (true){
+            var resModel = queueRecExe.take()
+            println("Exe got $ct")
+            println(resModel)
+            val workerCommand: Runnable = WorkerThreadCommand(resModel, ct)
+            threadPoolExecutor.execute(workerCommand)
         }
     }
 
@@ -53,14 +69,22 @@ class ServerModule {
      *
      * @param result arguments
      */
-    fun serverSender(result: ResultModule){
-        ForkJoinPool.commonPool().execute{
-            val json = gson.toJson(result)
-            val changedToBytes = json.toByteArray()
-            val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
-            println(result.msgToPrint + "alert!!")
-            logger.info("Отправлен результат")
-            socket.send(packetToSend)
+    fun serverSender() {
+        while (true) {
+            if (!queueExeSen.isEmpty()){
+                var result = queueExeSen.take()
+                println(queueExeSen)
+                ForkJoinPool.commonPool().execute {
+                    println("Sender got $ct")
+                    val json = gson.toJson(result)
+                    val changedToBytes = json.toByteArray()
+                    val packetToSend = DatagramPacket(changedToBytes, changedToBytes.size, packet.address, packet.port)
+                    println(result)
+                    logger.info("Отправлен результат")
+                    socket.send(packetToSend)
+                    println("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                }
+            }
         }
     }
 
@@ -88,6 +112,7 @@ class CommandStarter(): KoinComponent{
     val filterLessThanDistance: FilterLessThanDistance = FilterLessThanDistance()
     val switch: Switch = Switch()
     val token: Token = Token()
+    val logOut: LogOut = LogOut()
 
     fun mp(command: String): Command? {
 
@@ -109,7 +134,8 @@ class CommandStarter(): KoinComponent{
             "average_of_distance" to averageOfDistance,
             "filter_less_than_distance" to filterLessThanDistance,
             "switch" to switch,
-            "token" to token)
+            "token" to token,
+            "log_out" to logOut)
 
         if (command in COMMANDS) {
             workWithCollection.historyUpdate(command)

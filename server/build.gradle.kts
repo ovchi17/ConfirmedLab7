@@ -31,6 +31,7 @@ dependencies {
     implementation("io.insert-koin:koin-core:$koinVersion")
     implementation("com.google.code.gson:gson:2.8.9")
     implementation("org.apache.logging.log4j:log4j-core:2.17.0")
+    implementation("org.postgresql:postgresql:42.3.1")
 
     implementation(project(":commonFiles"))
 }

@@ -1,6 +1,7 @@
 package workCommandsList
 
 
+import ShaBuilder
 import dataSet.Route
 import dataSet.RouteComporator
 import moduleWithResults.ResultModule
@@ -23,16 +24,27 @@ class RemoveFirst: Command(){
 
         val collection = PriorityQueue<Route>(RouteComporator())
         collection.addAll(workWithCollection.getCollection())
+        val hashSHA = ShaBuilder()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         if (collection.size == 0){
             workWithResultModule.setMessages("emptyCollection")
         }else{
-            workWithCollection.pollCollection()
-            workWithResultModule.setMessages("cleared")
+            val checkObject = workWithCollection.peekCollection()
+            if (checkObject != null) {
+                if (checkObject.owner == owner){
+                    dbModule.deleteRoute(checkObject.id)
+                    workWithCollection.pollCollection()
+                    workWithResultModule.setMessages("cleared")
+                }else{
+                    workWithResultModule.setMessages("notYou")
+                }
+            }
         }
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

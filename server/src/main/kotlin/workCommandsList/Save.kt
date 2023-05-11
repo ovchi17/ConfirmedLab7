@@ -32,7 +32,8 @@ class Save: Command() {
         workWithResultModule.setMessages("saved")
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
      }
 }

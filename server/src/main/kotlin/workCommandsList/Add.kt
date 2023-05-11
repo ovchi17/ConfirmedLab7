@@ -1,5 +1,6 @@
 package workCommandsList
 
+import ShaBuilder
 import dataSet.*
 import java.time.LocalDate
 import moduleWithResults.ResultModule
@@ -20,6 +21,7 @@ class Add: Command() {
     override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String) {
 
         val str = getArgs as List<Any>
+        val hashSHA = ShaBuilder()
 
         workWithCollection.idPlusOne()
         var id: Long = workWithCollection.getId()
@@ -32,15 +34,16 @@ class Add: Command() {
         val stopper: Long = 1
 
         name = str[0] as String
-        val coord1: Long? = (str[1] as Double).toLong()
-        val coord2: Long? = (str[2] as Double).toLong()
-        val location1: Long? = (str[3] as Double).toLong()
-        val location2: Long? = (str[4] as Double).toLong()
-        val location3: Int? = (str[5] as Double).toInt()
-        val location1_2: Long? = (str[6] as Double).toLong()
-        val location2_2: Long? = (str[7] as Double).toLong()
-        val location3_2: Int? = (str[8] as Double).toInt()
+        val coord1: Long = (str[1] as Double).toLong()
+        val coord2: Long = (str[2] as Double).toLong()
+        val location1: Long = (str[3] as Double).toLong()
+        val location2: Long = (str[4] as Double).toLong()
+        val location3: Int = (str[5] as Double).toInt()
+        val location1_2: Long = (str[6] as Double).toLong()
+        val location2_2: Long = (str[7] as Double).toLong()
+        val location3_2: Int = (str[8] as Double).toInt()
         distance = (str[9] as Double).toLong()
+        val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
 
         coordinates = Coordinates(coord1, coord2)
         to = Location(location1, location2, location3)
@@ -53,14 +56,22 @@ class Add: Command() {
             creationDate = creationDate,
             from = from,
             to = to,
-            distance = distance
+            distance = distance,
+            owner = owner
         )
 
         workWithCollection.addElementToCollection(routeToAdd)
         workWithResultModule.setMessages("success")
         workWithResultModule.setUniqueKey(uniqueToken)
 
-        serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.availableTokens[hashSHA.toSha(login)]?.let {
+            dbModule.addRoute(id, name, creationDate, location1, location2, location3, location1_2, location2_2, location3_2, distance, coord1, coord2,
+                it
+            )
+        }
+
+        //serverModule.serverSender(workWithResultModule.getResultModule())
+        serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
     }
 }

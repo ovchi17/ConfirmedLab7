@@ -144,7 +144,7 @@ class Tokenizator: KoinComponent {
             }
             sendList.add(newToken)
             clientModule.sender(command, sendList, tkn) // Следить
-            val resultAnswer = clientModule.receiver()
+            val resultAnswer = clientModule.receiver(0)
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfString"){
             logger.info("Начала запуска команды по шаблону listOfString")
@@ -177,7 +177,7 @@ class Tokenizator: KoinComponent {
             val list = mutableListOf<Any>(name, coord1, coord2, location1, location2, location3, location1_2, location2_2, location3_2, distance)
             sendList.addAll(list)
             clientModule.sender(command, sendList, tkn) // Следить
-            val resultAnswer = clientModule.receiver()
+            val resultAnswer = clientModule.receiver(0)
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfObjectPlus"){
             logger.info("Начала запуска команды по шаблону listOfObjectPlus")
@@ -195,7 +195,7 @@ class Tokenizator: KoinComponent {
             val list = mutableListOf<Any>(name, coord1, coord2, location1, location2, location3, location1_2, location2_2, location3_2, distance, id)
             sendList.addAll(list)
             clientModule.sender(command, sendList, tkn) // Следить
-            val resultAnswer = clientModule.receiver()
+            val resultAnswer = clientModule.receiver(0)
             displayModule.displayModule(resultAnswer)
         }else if(commandsList(command) == "listOfNo"){
             logger.info("Начала запуска команды по шаблону listOfNo")
@@ -205,7 +205,7 @@ class Tokenizator: KoinComponent {
                 exit.execute(tkn)
             }else{
                 clientModule.sender(command, sendList, tkn) //Следить
-                val resultAnswer = clientModule.receiver()
+                val resultAnswer = clientModule.receiver(0)
                 if (command == "update_command"){
                     update.execute(resultAnswer)
                 }else{
