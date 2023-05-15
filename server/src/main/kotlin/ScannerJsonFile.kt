@@ -1,10 +1,5 @@
-import controllers.CollectionMainCommands
-import controllers.WorkWithFile
-import dataSet.Route
 import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
-import java.io.File
-import java.util.*
+
 
 /**
  * Class ScannerJsonFile. Scan Json File

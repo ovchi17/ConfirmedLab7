@@ -7,16 +7,10 @@ import moduleWithResults.Status
 import moduleWithResults.WorkWithResultModule
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import org.koin.core.context.unloadKoinModules
 import usersView.AnswerToUser
-import java.net.DatagramPacket
-import java.net.InetAddress
-import java.net.SocketTimeoutException
 import java.nio.ByteBuffer
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
-import java.nio.channels.SocketChannel
-import java.util.ResourceBundle
 
 /**
  * Class ClientModule. Works with client.

@@ -1,12 +1,7 @@
-import com.google.gson.Gson
 import moduleWithResults.ResultModule
-import moduleWithResults.Status
 import moduleWithResults.WorkWithResultModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import java.lang.management.LockInfo
-import java.net.DatagramPacket
-import java.net.DatagramSocket
 
 class WorkerThreadCommand(info: ResultModule, num: Int): Runnable, KoinComponent {
 

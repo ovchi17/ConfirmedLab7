@@ -1,7 +1,5 @@
 package workCommandsList
 
-import moduleWithResults.ResultModule
-
 /**
  * Class Info. Shows information about a commands
  *

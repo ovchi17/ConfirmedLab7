@@ -4,7 +4,6 @@ import ClientModule
 import Tokenizator
 import commandsHelpers.AddSet
 import commandsHelpers.ExecuteScript
-import controllers.*
 import org.koin.dsl.module
 import usersView.ConsoleWriter
 

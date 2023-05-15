@@ -5,8 +5,6 @@ import moduleWithResults.WorkWithResultModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import java.net.DatagramPacket
-import java.net.DatagramSocket
-
 class WorkerThread(packetGet: DatagramPacket, num: Int): Runnable, KoinComponent {
 
     val packet = packetGet
