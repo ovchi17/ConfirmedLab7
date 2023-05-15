@@ -41,11 +41,6 @@ class DataBaseManager(): KoinComponent{
 
     fun connect(): Connection {
         try {
-//            val properties = Properties()
-//            val fileInputStream: FileInputStream = FileInputStream("C:\\Users\\Akina\\IdeaProjects\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
-//            properties.load(fileInputStream)
-//            val user = properties.getProperty("user")
-//            val pas = properties.getProperty("password")
             val connection = DriverManager.getConnection(url, user, pas)
             println("коннект настройка")
             return connection
