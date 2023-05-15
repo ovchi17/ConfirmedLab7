@@ -21,15 +21,15 @@ import java.util.concurrent.LinkedBlockingQueue
  * @since 1.0.0
  */
 class ServerModule {
-    var socket = DatagramSocket(2022)
+    var socket = DatagramSocket(2024)
     val commandStarter = CommandStarter()
     val gson = Gson()
     val buffer = ByteArray(65535)
     val packet = DatagramPacket(buffer, buffer.size)
     val logger: Logger = LogManager.getLogger(ServerModule::class.java)
-    val availableTokens = mutableMapOf<String, String>()
-    val tokenToValid = mutableMapOf<String, Boolean>()
-    val tokenToStatus = mutableMapOf<String, String>()
+    val availableTokens = mutableMapOf<String, String>() // hash-token -> hashLogin
+    val tokenToValid = mutableMapOf<String, Boolean>() // hash-token -> valid (t/f)
+    val tokenToStatus = mutableMapOf<String, String>() // hash-token -> status (user/admin)
     val hashSHA = ShaBuilder()
     val workWithResultModule = WorkWithResultModule()
     val threadPoolReceiver = Executors.newFixedThreadPool(10)

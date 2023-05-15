@@ -3,7 +3,6 @@ package workCommandsList
 import ShaBuilder
 import dataSet.*
 import java.time.LocalDate
-import moduleWithResults.ResultModule
 
 /**
  * Class Add. Adds a new object to the collection
@@ -44,6 +43,7 @@ class Add: Command() {
         val location3_2: Int = (str[8] as Double).toInt()
         distance = (str[9] as Double).toLong()
         val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
+        val saved: Boolean = false
 
         coordinates = Coordinates(coord1, coord2)
         to = Location(location1, location2, location3)
@@ -57,7 +57,8 @@ class Add: Command() {
             from = from,
             to = to,
             distance = distance,
-            owner = owner
+            owner = owner,
+            saved = false
         )
 
         workWithCollection.addElementToCollection(routeToAdd)
@@ -66,7 +67,7 @@ class Add: Command() {
 
         serverModule.availableTokens[hashSHA.toSha(login)]?.let {
             dbModule.addRoute(id, name, creationDate, location1, location2, location3, location1_2, location2_2, location3_2, distance, coord1, coord2,
-                it
+                it , saved
             )
         }
 

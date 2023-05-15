@@ -46,6 +46,7 @@ class UpdateId: Command() {
         distance = (str[9] as Double).toLong()
         id = (str[10] as Double).toLong()
         val owner = serverModule.availableTokens[hashSHA.toSha(login)].toString()
+        val saved: Boolean = false
 
         coordinates = Coordinates(coord1, coord2)
         to = Location(location1, location2, location3)
@@ -59,7 +60,8 @@ class UpdateId: Command() {
             from = from,
             to = to,
             distance = distance,
-            owner = owner
+            owner = owner,
+            saved = false
         )
 
         val collection = PriorityQueue<Route>(RouteComporator())
@@ -73,7 +75,7 @@ class UpdateId: Command() {
             val checkObject = collection.peek()
             if (checkObject.id == id && checkObject.owner == owner){
                 workWithCollection.addElementToCollection(routeToAdd)
-                dbModule.addRoute(id, name, creationDate, location1, location2, location3, location1_2, location2_2, location3_2, distance, coord1, coord2, owner)
+                dbModule.addRoute(id, name, creationDate, location1, location2, location3, location1_2, location2_2, location3_2, distance, coord1, coord2, owner, saved)
                 workWithResultModule.setMessages("success")
             }else{
                 workWithResultModule.setMessages("noId")
