@@ -9164,3 +9164,6 @@
 2023-05-15 03:19:36.007 [ForkJoinPool.commonPool-worker-2] INFO  ServerModule - Отправлен результат
 2023-05-15 03:19:36.007 [main] INFO  ClientModule - Получен ответ от сервера
 2023-05-15 03:19:36.008 [main] INFO  ClientModule - Остановка DatagramChannel
+2023-05-15 05:57:10.944 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-15 05:57:43.045 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-15 06:06:51.955 [main] INFO  ServerModuleGet - Запуск сервера

@@ -19,7 +19,6 @@ fun main() {
     dataBaseManager.uploadAllRoutes()
     dataBaseManager.uploadAllLogins()
     System.setProperty("log4j.configurationFile", "classpath:log4j2.xml")
-//    System.setProperty("DataOfCollection.server", "D:\\HOTFIXLABSIX\\untitled\\server\\src\\main\\resources\\DataOfCollection.txt")
     val logger: Logger = LogManager.getLogger(ServerModuleGet::class.java)
     logger.info("Запуск сервера")
     val threadPoolMain = Executors.newFixedThreadPool(10)

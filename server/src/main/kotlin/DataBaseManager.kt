@@ -4,6 +4,7 @@ import dataSet.Location
 import dataSet.Route
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import java.io.FileInputStream
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
@@ -13,8 +14,8 @@ import java.util.*
 
 class DataBaseManager(): KoinComponent{
 
-    val user = "postgres"
-    val pas = "admin"
+    val user = scanLogNPass("user")
+    val pas = scanLogNPass("pas")
     val url = "jdbc:postgresql://localhost:5433/postgres"
     val workWithCollection: CollectionMainCommands by inject()
     val serverModule: ServerModule by inject()
@@ -37,8 +38,14 @@ class DataBaseManager(): KoinComponent{
                     "values(?, ?, ?, ?);"
         )
 
+
     fun connect(): Connection {
         try {
+//            val properties = Properties()
+//            val fileInputStream: FileInputStream = FileInputStream("C:\\Users\\Akina\\IdeaProjects\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
+//            properties.load(fileInputStream)
+//            val user = properties.getProperty("user")
+//            val pas = properties.getProperty("password")
             val connection = DriverManager.getConnection(url, user, pas)
             println("коннект настройка")
             return connection
@@ -195,6 +202,22 @@ class DataBaseManager(): KoinComponent{
             insertLogin.setString(4, serverModule.tokenToStatus[tkn])
             insertLogin.execute()
         }
+    }
+
+    fun scanLogNPass(whatToGet: String): String {
+        val properties = Properties()
+        val fileInputStream: FileInputStream = FileInputStream("C:\\Users\\Akina\\IdeaProjects\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
+        properties.load(fileInputStream)
+        val user = properties.getProperty("user")
+        val pas = properties.getProperty("password")
+        var whatGetted: String = ""
+        if (whatToGet == "user") {
+            whatGetted = user
+        }
+        if (whatToGet == "pas") {
+            whatGetted = pas
+        }
+        return whatGetted
     }
 
 }
