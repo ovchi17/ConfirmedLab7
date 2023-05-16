@@ -1,5 +1,6 @@
 package workCommandsList
 
+import DataBaseManager
 import dataSet.Route
 import dataSet.RouteComporator
 import java.util.PriorityQueue
@@ -18,17 +19,14 @@ class Save: Command() {
      * @param getArgs arguments
      */
     override fun execute(getArgs: MutableList<Any>, login:String, uniqueToken:String){
-        val pathToFile: String = System.getenv("DATAOFCOLLECTION")
-        val collection = PriorityQueue<Route>(RouteComporator())
-        collection.addAll(workWithCollection.getCollection())
-        val list = workWithCollection.collectionToList()
-        val jsonString = serializer.serialize(list)
-        workWithFile.writeToFile(collection, pathToFile, jsonString)
+
+        dbModule.savingTrue()
 
         workWithResultModule.setMessages("saved")
         workWithResultModule.setUniqueKey(uniqueToken)
 
         serverModule.queueExeSen.put(workWithResultModule.getResultModule())
         workWithResultModule.clear()
+
      }
 }

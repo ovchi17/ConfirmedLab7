@@ -49,6 +49,18 @@ class DataBaseManager(): KoinComponent{
         }
     }
 
+    fun savingTrue() {
+        val sqlQuery = "UPDATE public.\"Route\" SET saved = true;"
+        val statement = connectionDB.createStatement()
+        val rowsAffected = statement.executeUpdate(sqlQuery)
+    }
+
+    fun deleteWhenExit() {
+        val sqlQuery = "DELETE FROM public.\"Route\" WHERE saved = false;"
+        val statement = connectionDB.createStatement()
+        val rowsAffected = statement.executeUpdate(sqlQuery)
+    }
+
     fun addRoute(
         id: Long,
         name: String,

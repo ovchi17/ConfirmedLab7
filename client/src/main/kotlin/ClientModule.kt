@@ -23,12 +23,12 @@ class ClientModule() {
     private lateinit var channel: DatagramChannel
     val answerToUser = AnswerToUser()
     private val nameHost: String = "localhost"
-    private val namePort: Int = 2024
+    private val namePort: Int = 2021
     val gson = Gson()
     val logger: Logger = LogManager.getLogger(ClientModule::class.java)
     val keyGenerator: KeyGenerator = KeyGenerator()
     var key = "nothing"
-
+    
     /**
      * start method. Starts client module
      *
