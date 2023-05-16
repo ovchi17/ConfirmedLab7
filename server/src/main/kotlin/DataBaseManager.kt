@@ -4,6 +4,7 @@ import dataSet.Location
 import dataSet.Route
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import org.postgresql.util.PSQLException
 import java.io.FileInputStream
 import java.sql.Connection
 import java.sql.DriverManager
@@ -16,7 +17,7 @@ class DataBaseManager(): KoinComponent{
 
     val user = scanLogNPass("user")
     val pas = scanLogNPass("pas")
-    val url = "jdbc:postgresql://localhost:5433/postgres"
+    val url = "jdbc:postgresql://localhost:5433/studs"
     val workWithCollection: CollectionMainCommands by inject()
     val serverModule: ServerModule by inject()
     val connectionDB = connect()
@@ -59,6 +60,21 @@ class DataBaseManager(): KoinComponent{
         val sqlQuery = "DELETE FROM public.\"Route\" WHERE saved = false;"
         val statement = connectionDB.createStatement()
         val rowsAffected = statement.executeUpdate(sqlQuery)
+    }
+
+    fun maxId(): Long {
+        try{
+            val sqlQuery = "SELECT MAX(id) FROM public.\"Route\";"
+            val statement = connectionDB.createStatement()
+            val rowsAffected = statement.executeQuery(sqlQuery)
+            if (rowsAffected.next()){
+                return(rowsAffected.getLong(1) + 1)
+            }else{
+                return 1
+            }
+        }catch (e: PSQLException){
+            return 1
+        }
     }
 
     fun addRoute(
@@ -213,7 +229,7 @@ class DataBaseManager(): KoinComponent{
 
     fun scanLogNPass(whatToGet: String): String {
         val properties = Properties()
-        val fileInputStream: FileInputStream = FileInputStream("C:\\Users\\Akina\\IdeaProjects\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
+        val fileInputStream: FileInputStream = FileInputStream("D:\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
         properties.load(fileInputStream)
         val user = properties.getProperty("user")
         val pas = properties.getProperty("password")

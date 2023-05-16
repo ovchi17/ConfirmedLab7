@@ -54,6 +54,11 @@ class WorkWithCollection: CollectionMainCommands {
         idManager++
     }
 
+    @Synchronized
+    override fun setInitId(id: Long) {
+        idManager = id
+    }
+
     /**
      * clearCollection method. Clear collection
      *

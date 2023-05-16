@@ -47,6 +47,8 @@ interface CollectionMainCommands {
      */
     fun idPlusOne()
 
+    fun setInitId(id: Long)
+
     /**
      * historyUpdate method. Update commands history
      *

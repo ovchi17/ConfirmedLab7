@@ -54,7 +54,7 @@ class RemoveById: Command() {
                 }
             }
             workWithResultModule.setMessages(setMessageForMoreThenOne)
-            if (setMessageForMoreThenOne == "cleared"){
+            if (setMessageForMoreThenOne != "cleared"){
                 workWithResultModule.setMessages("notYou")
             }
         }
