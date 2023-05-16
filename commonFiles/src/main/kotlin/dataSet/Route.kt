@@ -2,11 +2,8 @@ package dataSet
 
 import controllers.DateAsStringSerializer
 import kotlinx.serialization.Contextual
-import javax.management.InvalidAttributeValueException
 import java.time.LocalDate;
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 /**
  * Data Class Route. CollectionModules
@@ -26,7 +23,8 @@ data class Route(
     var to: Location,
     var distance: Long,
     var coordinates: Coordinates,
-    var owner: String
+    var owner: String,
+    var saved: Boolean
 )
 
 
@@ -39,7 +37,8 @@ fun main(){
         to = Location(4,4,5),
         distance = 100,
         coordinates = Coordinates(1, 2),
-        owner = "merin"
+        owner = "merin",
+        saved = false
     )
     //println(Json.encodeToString(route))
 }

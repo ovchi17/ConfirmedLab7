@@ -1,12 +1,10 @@
 import controllers.CollectionMainCommands
-import controllers.WorkWithCollection
 import dataSet.Coordinates
 import dataSet.Location
 import dataSet.Route
-import di.serverModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import org.koin.java.KoinJavaComponent.inject
+import java.io.FileInputStream
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
@@ -16,17 +14,17 @@ import java.util.*
 
 class DataBaseManager(): KoinComponent{
 
-    val user = "postgres"
-    val pas = "admin"
-    val url = "jdbc:postgresql://localhost:5433/studs"
+    val user = scanLogNPass("user")
+    val pas = scanLogNPass("pas")
+    val url = "jdbc:postgresql://localhost:5433/postgres"
     val workWithCollection: CollectionMainCommands by inject()
     val serverModule: ServerModule by inject()
     val connectionDB = connect()
     val adderRoute =
         connectionDB.prepareStatement(
             "insert into public.\"Route\" " +
-                    "(id, name, \"creationDate\", location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner) " +
-                    "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+                    "(id, name, \"creationDate\", location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner, saved) " +
+                    "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
         )
     val clearStatement = connectionDB.prepareStatement("delete from public.\"Route\";")
     val deleteRouteStatment = connectionDB.prepareStatement("delete from public.\"Route\" where(public.\"Route\".id = ?);")
@@ -40,6 +38,7 @@ class DataBaseManager(): KoinComponent{
                     "values(?, ?, ?, ?);"
         )
 
+
     fun connect(): Connection {
         try {
             val connection = DriverManager.getConnection(url, user, pas)
@@ -50,7 +49,34 @@ class DataBaseManager(): KoinComponent{
         }
     }
 
-    fun addRoute(id: Long, name: String, creationDate: LocalDate, location11: Long, location12: Long, location13: Int, location21: Long, location22: Long, location23: Int, distance: Long, coordinates1: Long, coordinates2: Long, owner: String) {
+    fun savingTrue() {
+        val sqlQuery = "UPDATE public.\"Route\" SET saved = true;"
+        val statement = connectionDB.createStatement()
+        val rowsAffected = statement.executeUpdate(sqlQuery)
+    }
+
+    fun deleteWhenExit() {
+        val sqlQuery = "DELETE FROM public.\"Route\" WHERE saved = false;"
+        val statement = connectionDB.createStatement()
+        val rowsAffected = statement.executeUpdate(sqlQuery)
+    }
+
+    fun addRoute(
+        id: Long,
+        name: String,
+        creationDate: LocalDate,
+        location11: Long,
+        location12: Long,
+        location13: Int,
+        location21: Long,
+        location22: Long,
+        location23: Int,
+        distance: Long,
+        coordinates1: Long,
+        coordinates2: Long,
+        owner: String,
+        saved: Boolean
+    ) {
         try{
             val date = Date.from(creationDate.atStartOfDay(ZoneId.systemDefault()).toInstant())
             val sqlDate = java.sql.Date(date.time)
@@ -67,6 +93,7 @@ class DataBaseManager(): KoinComponent{
             adderRoute.setLong(11, coordinates1)
             adderRoute.setLong(12, coordinates2)
             adderRoute.setString(13, owner)
+            adderRoute.setBoolean(14, saved)
             val resultBuild = adderRoute.executeUpdate()
             println(resultBuild)
             if (resultBuild == 0){
@@ -97,9 +124,24 @@ class DataBaseManager(): KoinComponent{
         }
     }
 
-    fun updateRoute(id: Long, name: String, creationDate: LocalDate, location11: Long, location12: Long, location13: Int, location21: Long, location22: Long, location23: Int, distance: Long, coordinates1: Long, coordinates2: Long, owner: String){
+    fun updateRoute(id: Long, name: String, creationDate: LocalDate, location11: Long, location12: Long, location13: Int, location21: Long, location22: Long, location23: Int, distance: Long, coordinates1: Long, coordinates2: Long, owner: String, saved: Boolean){
         deleteRoute(id)
-        addRoute(id, name, creationDate, location11, location12, location13, location21, location22, location23, distance, coordinates1, coordinates2, owner)
+        addRoute(
+            id,
+            name,
+            creationDate,
+            location11,
+            location12,
+            location13,
+            location21,
+            location22,
+            location23,
+            distance,
+            coordinates1,
+            coordinates2,
+            owner,
+            saved
+        )
     }
 
     fun uploadAllRoutes(){
@@ -118,7 +160,8 @@ class DataBaseManager(): KoinComponent{
                     from = from,
                     to = to,
                     distance = allRoutes.getLong("distance"),
-                    owner = allRoutes.getString("owner")
+                    owner = allRoutes.getString("owner"),
+                    saved = true
                 )
 
                 workWithCollection.addElementToCollection(routeToAdd)
@@ -166,6 +209,22 @@ class DataBaseManager(): KoinComponent{
             insertLogin.setString(4, serverModule.tokenToStatus[tkn])
             insertLogin.execute()
         }
+    }
+
+    fun scanLogNPass(whatToGet: String): String {
+        val properties = Properties()
+        val fileInputStream: FileInputStream = FileInputStream("C:\\Users\\Akina\\IdeaProjects\\ConfirmedLab7\\server\\src\\main\\resources\\dbconfig.cfg")
+        properties.load(fileInputStream)
+        val user = properties.getProperty("user")
+        val pas = properties.getProperty("password")
+        var whatGetted: String = ""
+        if (whatToGet == "user") {
+            whatGetted = user
+        }
+        if (whatToGet == "pas") {
+            whatGetted = pas
+        }
+        return whatGetted
     }
 
 }

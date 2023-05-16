@@ -4,9 +4,7 @@ import ClientModule
 import moduleWithResults.Status
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import org.koin.java.KoinJavaComponent.inject
 import usersView.AnswerToUser
-import usersView.ConsoleWriter
 
 class GetToken: KoinComponent {
 

@@ -3,7 +3,6 @@ package workCommandsList
 import DataBaseManager
 import ServerModule
 import controllers.*
-import moduleWithResults.ResultModule
 import moduleWithResults.WorkWithResultModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

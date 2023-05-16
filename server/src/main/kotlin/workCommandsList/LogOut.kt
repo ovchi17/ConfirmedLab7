@@ -1,9 +1,7 @@
 package workCommandsList
 
 import ShaBuilder
-import moduleWithResults.ResultModule
 import moduleWithResults.Status
-import java.security.MessageDigest
 
 class LogOut: Command() {
 

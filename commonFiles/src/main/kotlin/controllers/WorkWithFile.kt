@@ -1,7 +1,6 @@
 package controllers
 
 import dataSet.Route
-import dataSet.RouteComporator
 import java.io.File
 import java.io.FileReader
 import java.util.*
