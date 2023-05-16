@@ -122,3 +122,23 @@
 2023-04-21 19:01:17.369 [main] INFO  ServerModule - Отправлен результат
 2023-04-21 19:04:53.492 [main] INFO  ServerModule - Получена команда: show
 2023-04-21 19:04:53.493 [main] INFO  ServerModule - Отправлен результат
+2023-05-16 19:17:34.494 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-16 19:18:20.453 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 19:18:42.521 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 19:19:06.385 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 19:19:32.620 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:15:41.866 [main] INFO  ServerModuleGet - Запуск сервера
+2023-05-16 23:16:21.971 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:16:42.451 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:17:13.198 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:17:42.127 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:18:00.544 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:18:14.958 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:18:23.675 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:18:34.901 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:19:34.797 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:19:40.866 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:19:55.049 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:20:32.323 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:20:36.373 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат
+2023-05-16 23:21:22.122 [ForkJoinPool.commonPool-worker-1] INFO  ServerModule - Отправлен результат

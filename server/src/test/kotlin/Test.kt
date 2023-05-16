@@ -21,13 +21,13 @@ internal class Test: KoinComponent {
 
     private var userRepository: DataBaseManager = DataBaseManager()
 
-    val url = "jdbc:postgresql://localhost:5433/postgres"
+    val url = "jdbc:postgresql://localhost:5433/studs"
     val user = "postgres"
     val pas = "admin"
 
     @BeforeAll
     fun setUp() {
-        DriverManager.getConnection("jdbc:postgresql://localhost:5433/postgres", user, pas).use { conn ->
+        DriverManager.getConnection("jdbc:postgresql://localhost:5433/studs", user, pas).use { conn ->
             conn.createStatement().use { stmt ->
                 stmt.execute("SELECT * FROM public.\"Route\"")
             }
@@ -41,7 +41,7 @@ internal class Test: KoinComponent {
 
     @AfterAll
     fun tearDown() {
-        DriverManager.getConnection("jdbc:postgresql://localhost:5433/postgres", user, pas).use { conn ->
+        DriverManager.getConnection("jdbc:postgresql://localhost:5433/studs", user, pas).use { conn ->
             conn.createStatement().use { stmt ->
                 stmt.execute("DELETE FROM public.\"Route\"")
             }
@@ -58,7 +58,7 @@ internal class Test: KoinComponent {
         val token: Token = Token()
         val sendList = mutableListOf<Any>("lg:ps")
         val login: String = "login"
-        val uniqueToken: String = "hiu"
+        val uniqueToken: String = "bebra"
         val serverModule: ServerModule by inject()
 
         token.execute(sendList, login, uniqueToken)
@@ -75,7 +75,7 @@ internal class Test: KoinComponent {
     @Test
     fun TestRoute() {
         var id:Long = 1
-        var name: String = "3"
+        var name: String = "AlexeyIvanovIskander"
         var creationDate: LocalDate = LocalDate.now()
         var from: Location = Location(3, 3,3)
         var to: Location = Location(3, 3,3)

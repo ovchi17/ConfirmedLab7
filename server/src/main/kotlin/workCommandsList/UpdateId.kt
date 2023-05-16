@@ -83,17 +83,23 @@ class UpdateId: Command() {
                 workWithCollection.addElementToCollection(collection.peek())
             }
         }else{
+            var fl = true
             workWithCollection.clearCollection()
             for (i in 0..collection.size - 1){
                 var checkObject = collection.peek()
                 if (checkObject.id == id && checkObject.owner == owner){
                     workWithCollection.addElementToCollection(routeToAdd)
                     workWithResultModule.setMessages("success")
+                    fl = false
                     collection.poll()
                 }else{
                     workWithCollection.addElementToCollection(collection.peek())
                     collection.poll()
                 }
+            }
+            if (fl == false){
+                workWithResultModule.setMessages("noId")
+                workWithResultModule.setMessages("или нет доступа к объекту")
             }
         }
 
